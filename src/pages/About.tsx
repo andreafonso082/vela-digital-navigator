@@ -2,33 +2,25 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Target, Zap, Users, Heart } from "lucide-react";
 import velaLogo from "@/assets/vela-logo.png";
-
 const About = () => {
-  const values = [
-    {
-      icon: Target,
-      title: "Transparência",
-      description: "Preços claros, sem surpresas. O que vê é o que paga.",
-    },
-    {
-      icon: Zap,
-      title: "Rapidez",
-      description: "Entregamos projetos em tempo recorde sem comprometer a qualidade.",
-    },
-    {
-      icon: Users,
-      title: "Simplicidade",
-      description: "Processos simples e diretos. Marketing sem complicações.",
-    },
-    {
-      icon: Heart,
-      title: "Dedicação",
-      description: "Tratamos o seu negócio como se fosse nosso.",
-    },
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const values = [{
+    icon: Target,
+    title: "Transparência",
+    description: "Preços claros, sem surpresas. O que vê é o que paga."
+  }, {
+    icon: Zap,
+    title: "Rapidez",
+    description: "Entregamos projetos em tempo recorde sem comprometer a qualidade."
+  }, {
+    icon: Users,
+    title: "Simplicidade",
+    description: "Processos simples e diretos. Marketing sem complicações."
+  }, {
+    icon: Heart,
+    title: "Dedicação",
+    description: "Tratamos o seu negócio como se fosse nosso."
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -71,11 +63,7 @@ const About = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <img 
-                src={velaLogo} 
-                alt="Vela Agency Logo" 
-                className="w-64 h-64 object-contain"
-              />
+              <img alt="Vela Agency Logo" src="/lovable-uploads/4cd54715-777a-47f4-894a-5a1d6a206ac9.png" className="w-72 h-72 object-contain" />
             </div>
           </div>
         </div>
@@ -105,18 +93,13 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {values.map((value, index) => (
-              <div 
-                key={index}
-                className="text-center p-6 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300"
-              >
+            {values.map((value, index) => <div key={index} className="text-center p-6 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
                   <value.icon size={32} className="text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">{value.title}</h3>
                 <p className="text-muted-foreground text-sm">{value.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -156,8 +139,6 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
