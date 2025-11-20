@@ -188,7 +188,7 @@ export default {
         "fade-left": "fade-left 0.8s ease-out",
         "fade-right": "fade-right 0.8s ease-out",
         "scale-up": "scale-up 0.6s ease-out",
-        "shake": "shake 3s ease-in-out infinite",
+        "shake": "shake 2s ease-in-out infinite",
         "draw": "draw 2s ease-in-out infinite",
       },
     },
