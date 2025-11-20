@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Zap, Target, Palette, ArrowRight, Quote } from "lucide-react";
+import { Zap, Pen, ArrowRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
@@ -38,7 +38,7 @@ const Home = () => {
     title: "Preço Acessível",
     description: "Marketing profissional ao alcance de pequenos negócios"
   }, {
-    icon: Palette,
+    icon: Pen,
     title: "Design Moderno",
     description: "Designs atuais e elegantes que destacam a sua marca"
   }];
