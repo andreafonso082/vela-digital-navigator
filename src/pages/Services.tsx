@@ -13,7 +13,7 @@ const Services = () => {
   const services = [
     {
       title: "Criação de Websites",
-      price: "400€",
+      price: "Desde 400€",
       description: "Websites modernos, responsivos e otimizados para conversão. Inclui design personalizado, SEO básico e formação de gestão.",
       image: websiteImage,
       features: [
