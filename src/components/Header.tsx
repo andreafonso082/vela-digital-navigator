@@ -6,7 +6,7 @@ import velaLogo from "@/assets/vela-logo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [{
-    name: "Home",
+    name: "Início",
     path: "/"
   }, {
     name: "Sobre Nós",
