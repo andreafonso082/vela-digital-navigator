@@ -105,7 +105,7 @@ const About = () => {
       {/* Process Timeline Section */}
       <section ref={processSection.elementRef} className="pt-12 pb-20 mb-0">
         <div className={`container mx-auto px-4 transition-all duration-700 ${processSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
-          <div className="text-center mb-20">
+          <div className="text-center mb-28">
             <h2 className="text-4xl font-bold text-foreground">Como Trabalhamos</h2>
           </div>
 
