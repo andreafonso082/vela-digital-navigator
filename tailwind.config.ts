@@ -177,6 +177,14 @@ export default {
             opacity: "1",
           },
         },
+        "wave-fill": {
+          "0%": {
+            width: "0%",
+          },
+          "100%": {
+            width: "100%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -190,6 +198,7 @@ export default {
         "scale-up": "scale-up 0.6s ease-out",
         "shake": "shake 1s ease-in-out infinite",
         "draw": "draw 2s ease-in-out infinite",
+        "wave-fill": "wave-fill 2s ease-in-out forwards",
       },
     },
   },
