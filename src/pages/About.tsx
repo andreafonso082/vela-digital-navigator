@@ -107,63 +107,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section ref={valuesSection.elementRef} className="py-20">
-        <div className={`container mx-auto px-4 transition-all duration-700 ${valuesSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Os Nossos Valores</h2>
-            <p className="text-xl text-muted-foreground">O que nos guia em cada projeto</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {values.map((value, index) => <div key={index} className="text-center p-6 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-                  <value.icon size={32} className="text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">{value.title}</h3>
-                <p className="text-muted-foreground text-sm">{value.description}</p>
-              </div>)}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Timeline Section */}
-      <section ref={processSection.elementRef} className="py-20 bg-accent">
-        <div className={`container mx-auto px-4 transition-all duration-700 ${processSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Como Trabalhamos</h2>
-            <p className="text-xl text-muted-foreground">O caminho para o sucesso do seu negócio</p>
-          </div>
-
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (
-                <div key={index} className="relative">
-                  {/* Connector Line */}
-                  {index < processSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-12 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-primary/30 z-0" />
-                  )}
-                  
-                  {/* Step Card */}
-                  <div className="relative bg-card p-6 rounded-lg shadow-elegant hover:shadow-strong transition-all duration-300 z-10">
-                    <div className="flex flex-col items-center text-center">
-                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                        <step.icon size={32} className="text-primary" />
-                      </div>
-                      <span className="text-sm font-semibold text-primary mb-2">{step.step}</span>
-                      <h3 className="text-xl font-bold text-foreground mb-3">{step.title}</h3>
-                      <p className="text-muted-foreground text-sm">{step.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Team Focus Section */}
-      <section ref={specializationSection.elementRef} className="py-20 bg-background">
+      <section ref={specializationSection.elementRef} className="py-20 bg-accent">
         <div className={`container mx-auto px-4 transition-all duration-700 ${specializationSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-foreground mb-6 text-center">
