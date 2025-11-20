@@ -32,9 +32,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
-            {navLinks.map(link => <Link key={link.path} to={link.path} className="text-foreground/80 hover:text-primary transition-colors font-medium text-sm">
-                {link.name}
-              </Link>)}
+            {navLinks.map(link => {})}
             <Link to="/quote">
               <Button variant="default" size="sm" className="bg-primary hover:bg-primary-hover text-primary-foreground rounded-full">
                 Pedir Orçamento
