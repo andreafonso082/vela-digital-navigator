@@ -34,7 +34,7 @@ const Home = () => {
     title: "Entrega Rápida",
     description: "Projetos concluídos em tempo recorde sem comprometer a qualidade"
   }, {
-    icon: Target,
+    icon: "€",
     title: "Preço Acessível",
     description: "Marketing profissional ao alcance de pequenos negócios"
   }, {
@@ -146,7 +146,11 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pillars.map((pillar, index) => <div key={index} className="text-center p-8 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-                  <pillar.icon size={32} className="text-primary" />
+                  {typeof pillar.icon === 'string' ? (
+                    <span className="text-primary text-3xl font-bold">{pillar.icon}</span>
+                  ) : (
+                    <pillar.icon size={32} className="text-primary" />
+                  )}
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">{pillar.title}</h3>
                 <p className="text-muted-foreground">{pillar.description}</p>
