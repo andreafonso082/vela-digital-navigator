@@ -106,15 +106,13 @@ const About = () => {
       <section ref={processSection.elementRef} className="pt-12 pb-20 mb-0">
         <div className={`container mx-auto px-4 transition-all duration-700 ${processSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="text-center mb-28">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Como Trabalhamos</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4 text-center">Como Trabalhamos</h2>
             <div className="flex items-center justify-center gap-3 mb-6">
               <div className="h-px w-12 bg-primary/50"></div>
               <span className="text-primary font-semibold">•</span>
               <div className="h-px w-12 bg-primary/50"></div>
             </div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Um processo simples e transparente, desenhado para transformar a sua visão em realidade
-            </p>
+            
           </div>
 
           <div className="max-w-6xl mx-auto relative" style={{
