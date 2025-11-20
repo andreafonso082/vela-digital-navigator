@@ -1,0 +1,203 @@
+import { useState } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+
+const Contact = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    toast({
+      title: "Mensagem enviada!",
+      description: "Responderemos em menos de 24 horas.",
+    });
+    
+    setFormData({ name: "", email: "", phone: "", message: "" });
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-accent">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+              Entre em <span className="text-primary">Contacto</span>
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              Respondemos em menos de 24 horas. Vamos conversar sobre o seu projeto!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Contact Form */}
+            <div className="bg-card p-8 rounded-lg shadow-elegant">
+              <h2 className="text-3xl font-bold text-foreground mb-6">Envie uma Mensagem</h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    Nome *
+                  </label>
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full"
+                    placeholder="O seu nome"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    Email *
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full"
+                    placeholder="seuemail@exemplo.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                    Telefone
+                  </label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full"
+                    placeholder="+351 912 345 678"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    Mensagem *
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full min-h-[150px]"
+                    placeholder="Conte-nos sobre o seu projeto..."
+                  />
+                </div>
+
+                <Button 
+                  type="submit" 
+                  className="w-full bg-primary hover:bg-primary-hover text-primary-foreground"
+                  size="lg"
+                >
+                  Enviar Mensagem
+                </Button>
+              </form>
+            </div>
+
+            {/* Contact Info */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-bold text-foreground mb-6">Informações de Contacto</h2>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Mail className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">Email</h3>
+                      <p className="text-muted-foreground">info@velaagency.pt</p>
+                      <p className="text-muted-foreground">contato@velaagency.pt</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Phone className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">Telefone</h3>
+                      <p className="text-muted-foreground">+351 912 345 678</p>
+                      <p className="text-muted-foreground">+351 913 456 789</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <MapPin className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">Localização</h3>
+                      <p className="text-muted-foreground">Algarve, Portugal</p>
+                      <p className="text-muted-foreground">Atendemos todo o país</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Clock className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">Horário</h3>
+                      <p className="text-muted-foreground">Segunda a Sexta: 9h - 18h</p>
+                      <p className="text-muted-foreground">Fim de semana: Fechado</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary">
+                <h3 className="font-bold text-foreground mb-2">Resposta Rápida Garantida</h3>
+                <p className="text-muted-foreground">
+                  Comprometemo-nos a responder a todas as mensagens em menos de 24 horas úteis. 
+                  A sua mensagem é importante para nós!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Contact;
