@@ -79,10 +79,21 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-secondary-foreground/10 mt-8 pt-8 text-center">
-          <p className="text-sm text-secondary-foreground/60">
-            © {new Date().getFullYear()} Vela Agency. Todos os direitos reservados.
-          </p>
+        <div className="border-t border-secondary-foreground/10 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-secondary-foreground/60">
+              © {new Date().getFullYear()} Vela Agency. Todos os direitos reservados.
+            </p>
+            <div className="flex gap-4 text-sm">
+              <Link to="/privacy" className="text-secondary-foreground/60 hover:text-primary transition-colors">
+                Política de Privacidade
+              </Link>
+              <span className="text-secondary-foreground/40">|</span>
+              <Link to="/cookies" className="text-secondary-foreground/60 hover:text-primary transition-colors">
+                Política de Cookies
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>;
