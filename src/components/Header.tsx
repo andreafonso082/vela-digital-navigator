@@ -21,45 +21,79 @@ const Header = () => {
     name: "Contactos",
     path: "/contact"
   }];
-  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <nav className="container mx-auto px-4 py-4">
+  return (
+    <header className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8">
+      <nav className="mx-auto max-w-6xl bg-background/40 backdrop-blur-xl border border-border/30 rounded-full px-6 py-3 shadow-elegant">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img src={velaLogo} alt="Vela Agency" className="h-10 w-10 transition-transform group-hover:scale-105 text-center" />
-            <span className="text-2xl font-bold text-secondary">​</span>
+            <img 
+              src={velaLogo} 
+              alt="Vela Agency" 
+              className="h-8 w-8 transition-transform group-hover:scale-105" 
+            />
+            <span className="text-xl font-bold text-foreground hidden sm:inline">Vela</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map(link => <Link key={link.path} to={link.path} className="text-foreground hover:text-primary transition-colors font-medium">
+          <div className="hidden md:flex items-center gap-6">
+            {navLinks.map(link => (
+              <Link 
+                key={link.path} 
+                to={link.path} 
+                className="text-foreground/80 hover:text-primary transition-colors font-medium text-sm"
+              >
                 {link.name}
-              </Link>)}
+              </Link>
+            ))}
             <Link to="/quote">
-              <Button variant="default" className="bg-primary hover:bg-primary-hover text-primary-foreground">
+              <Button 
+                variant="default" 
+                size="sm"
+                className="bg-primary hover:bg-primary-hover text-primary-foreground rounded-full"
+              >
                 Pedir Orçamento
               </Button>
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <button 
+            className="md:hidden text-foreground p-2 hover:bg-accent/50 rounded-full transition-colors" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
+      </nav>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && <div className="md:hidden mt-4 pb-4 space-y-4 border-t border-border pt-4">
-            {navLinks.map(link => <Link key={link.path} to={link.path} className="block text-foreground hover:text-primary transition-colors font-medium py-2" onClick={() => setIsMenuOpen(false)}>
+      {/* Mobile Navigation - Floating Card */}
+      {isMenuOpen && (
+        <div className="md:hidden mt-2 mx-auto max-w-6xl bg-background/95 backdrop-blur-xl border border-border/30 rounded-3xl p-6 shadow-strong animate-fade-in">
+          <div className="space-y-3">
+            {navLinks.map(link => (
+              <Link 
+                key={link.path} 
+                to={link.path} 
+                className="block text-foreground/80 hover:text-primary transition-colors font-medium py-2 px-4 rounded-full hover:bg-accent/50" 
+                onClick={() => setIsMenuOpen(false)}
+              >
                 {link.name}
-              </Link>)}
+              </Link>
+            ))}
             <Link to="/quote" onClick={() => setIsMenuOpen(false)}>
-              <Button variant="default" className="w-full bg-primary hover:bg-primary-hover text-primary-foreground">
+              <Button 
+                variant="default" 
+                className="w-full bg-primary hover:bg-primary-hover text-primary-foreground rounded-full mt-2"
+              >
                 Pedir Orçamento
               </Button>
             </Link>
-          </div>}
-      </nav>
-    </header>;
+          </div>
+        </div>
+      )}
+    </header>
+  );
 };
 export default Header;
