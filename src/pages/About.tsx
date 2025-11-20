@@ -103,15 +103,15 @@ const About = () => {
       </section>
 
       {/* Process Timeline Section */}
-      <section ref={processSection.elementRef} className="pb-20 mb-0">
+      <section ref={processSection.elementRef} className="pt-16 pb-20 mb-0">
         <div className={`container mx-auto px-4 transition-all duration-700 ${processSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
-          <div className="text-center h-[120px] flex items-center justify-center">
+          <div className="text-center mb-8">
             <h2 className="text-4xl font-bold text-foreground">Como Trabalhamos</h2>
           </div>
 
           <div className="max-w-6xl mx-auto relative" style={{
-          paddingTop: '120px',
-          paddingBottom: '120px'
+          paddingTop: '80px',
+          paddingBottom: '80px'
         }}>
             {/* Continuous horizontal line */}
             <div className="absolute top-1/2 -translate-y-1/2 left-[50px] right-[50px] h-0.5 bg-primary/30 hidden md:block" />
