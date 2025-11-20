@@ -13,7 +13,6 @@ const About = () => {
   const processStep2 = useScrollAnimation();
   const processStep3 = useScrollAnimation();
   const processStep4 = useScrollAnimation();
-  
   const stepAnimations = [processStep1, processStep2, processStep3, processStep4];
   const values = [{
     icon: Target,
@@ -137,8 +136,8 @@ const About = () => {
                   
                   {/* Content positioned above or below with directional animation */}
                   <div className={`absolute left-1/2 -translate-x-1/2 w-full transition-all duration-700 ease-out ${index % 2 === 0 ? 'bottom-1/2 pb-6' : 'top-1/2 pt-6'} ${stepAnimations[index].isVisible ? 'opacity-100 translate-y-0' : `opacity-0 ${index % 2 === 0 ? '-translate-y-8' : 'translate-y-8'}`}`} style={{
-                    transitionDelay: `${index * 500}ms`
-                  }}>
+                transitionDelay: `${index * 500}ms`
+              }}>
                     <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
                     <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
                     <p className="text-muted-foreground text-sm px-2">{step.description}</p>
@@ -186,13 +185,13 @@ const About = () => {
                 <div className="bg-card p-6 rounded-lg shadow-elegant">
                   <h3 className="text-2xl font-bold text-primary mb-3">Arquitetos e Engenheiros Civis                    </h3>
                   <p className="text-muted-foreground">
-                    Compreendemos a importância de portfolios visuais impactantes e otimização para pesquisas locais de serviços de arquitetura. Toda a gente merece a oportunidade de ter uma boa casa. Por isso ajudamos ass pessoas que tratam das suas casa para que elas a possam ajudar a si de maneira mais eficiente!                                            
+                    Compreendemos a importância de portfolios visuais impactantes e otimização para pesquisas locais de serviços de arquitetura. Toda a gente merece a oportunidade de ter uma boa casa. Nós seremos os arquitetos da sua casa digital.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
                   </p>
                 </div>
                 <div className="bg-card p-6 rounded-lg shadow-elegant">
                   <h3 className="text-2xl font-bold text-primary mb-3">Clínicas Locais   </h3>
                   <p className="text-muted-foreground">
-                    Seja você uma clínica de estética, dentária ou até de animais de estimação, sabemos o que fazer no que toca a dar a conhecer os seus serviços e a mostrar ao mundo o que já fizeram pelos vossos clientes!                                                                                        
+                    Seja você uma clínica de estética, dentária ou até de animais de estimação, sabemos o que fazer no que toca a dar a conhecer os seus serviços e a mostrar ao mundo o que já fizeram pelos vossos clientes!                                                                                                                                                                                                                                                                        
                   </p>
                 </div>
               </div>
