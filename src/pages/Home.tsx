@@ -7,80 +7,60 @@ import heroImage from "@/assets/hero-caravel.jpg";
 import websiteImage from "@/assets/service-website.jpg";
 import socialImage from "@/assets/service-social.jpg";
 import photoImage from "@/assets/service-photo.jpg";
-
 const Home = () => {
-  const services = [
-    {
-      title: "Websites Profissionais",
-      description: "Websites modernos e responsivos desde 400€",
-      image: websiteImage,
-    },
-    {
-      title: "Gestão de Redes Sociais",
-      description: "Presença consistente por apenas 100€/mês",
-      image: socialImage,
-    },
-    {
-      title: "Fotografia & Vídeo",
-      description: "Conteúdo visual profissional a partir de 100€",
-      image: photoImage,
-    },
-  ];
-
-  const pillars = [
-    {
-      icon: Zap,
-      title: "Entrega Rápida",
-      description: "Projetos concluídos em tempo recorde sem comprometer a qualidade",
-    },
-    {
-      icon: Target,
-      title: "Preço Acessível",
-      description: "Marketing profissional ao alcance de pequenos negócios",
-    },
-    {
-      icon: Palette,
-      title: "Design Moderno",
-      description: "Designs atuais e elegantes que destacam a sua marca",
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "João Silva",
-      role: "Arquiteto",
-      content: "A Vela criou o meu website em tempo recorde. Profissionalismo e preço justo!",
-    },
-    {
-      name: "Maria Costa",
-      role: "Proprietária de Café",
-      content: "Finalmente tenho presença online sem gastar uma fortuna. Recomendo!",
-    },
-    {
-      name: "Pedro Santos",
-      role: "Consultor",
-      content: "Excelente serviço de SEO. Já apareço nas primeiras pesquisas do Google!",
-    },
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const services = [{
+    title: "Websites Profissionais",
+    description: "Websites modernos e responsivos desde 400€",
+    image: websiteImage
+  }, {
+    title: "Gestão de Redes Sociais",
+    description: "Presença consistente por apenas 100€/mês",
+    image: socialImage
+  }, {
+    title: "Fotografia & Vídeo",
+    description: "Conteúdo visual profissional a partir de 100€",
+    image: photoImage
+  }];
+  const pillars = [{
+    icon: Zap,
+    title: "Entrega Rápida",
+    description: "Projetos concluídos em tempo recorde sem comprometer a qualidade"
+  }, {
+    icon: Target,
+    title: "Preço Acessível",
+    description: "Marketing profissional ao alcance de pequenos negócios"
+  }, {
+    icon: Palette,
+    title: "Design Moderno",
+    description: "Designs atuais e elegantes que destacam a sua marca"
+  }];
+  const testimonials = [{
+    name: "João Silva",
+    role: "Arquiteto",
+    content: "A Vela criou o meu website em tempo recorde. Profissionalismo e preço justo!"
+  }, {
+    name: "Maria Costa",
+    role: "Proprietária de Café",
+    content: "Finalmente tenho presença online sem gastar uma fortuna. Recomendo!"
+  }, {
+    name: "Pedro Santos",
+    role: "Consultor",
+    content: "Excelente serviço de SEO. Já apareço nas primeiras pesquisas do Google!"
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
+        <div className="absolute inset-0 z-0" style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }} />
         
         <div className="container mx-auto px-4 z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Marketing profissional,<br />
+            Marketing profissional <br />
             <span className="text-primary">rápido e acessível</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
@@ -114,24 +94,15 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {services.map((service, index) => (
-              <div 
-                key={index}
-                className="bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-strong transition-all duration-300 group"
-              >
+            {services.map((service, index) => <div key={index} className="bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-strong transition-all duration-300 group">
                 <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2">{service.title}</h3>
                   <p className="text-muted-foreground">{service.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <div className="text-center">
@@ -155,18 +126,13 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pillars.map((pillar, index) => (
-              <div 
-                key={index}
-                className="text-center p-8 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300"
-              >
+            {pillars.map((pillar, index) => <div key={index} className="text-center p-8 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
                   <pillar.icon size={32} className="text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">{pillar.title}</h3>
                 <p className="text-muted-foreground">{pillar.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -199,23 +165,16 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                className="bg-card p-8 rounded-lg shadow-elegant"
-              >
+            {testimonials.map((testimonial, index) => <div key={index} className="bg-card p-8 rounded-lg shadow-elegant">
                 <div className="flex items-center gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <CheckCircle2 key={i} size={20} className="text-primary fill-primary" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <CheckCircle2 key={i} size={20} className="text-primary fill-primary" />)}
                 </div>
                 <p className="text-foreground mb-6 italic">"{testimonial.content}"</p>
                 <div>
                   <p className="font-bold text-foreground">{testimonial.name}</p>
                   <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -238,8 +197,6 @@ const Home = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
