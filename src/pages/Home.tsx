@@ -44,15 +44,18 @@ const Home = () => {
   const testimonials = [{
     name: "João Silva",
     role: "Arquiteto",
-    content: "A Vela criou o meu website em tempo recorde. Profissionalismo e preço justo!"
+    content: "A Vela criou o meu website em tempo recorde. Profissionalismo e preço justo!",
+    website: "https://example.com"
   }, {
     name: "Maria Costa",
     role: "Proprietária de Café",
-    content: "Finalmente tenho presença online sem gastar uma fortuna. Recomendo!"
+    content: "Finalmente tenho presença online sem gastar uma fortuna. Recomendo!",
+    website: "https://example.com"
   }, {
     name: "Pedro Santos",
     role: "Consultor",
-    content: "Excelente serviço de SEO. Já apareço nas primeiras pesquisas do Google!"
+    content: "Excelente serviço de SEO. Já apareço nas primeiras pesquisas do Google!",
+    website: "https://example.com"
   }];
   return <div className="min-h-screen bg-background">
       <Header />
@@ -178,15 +181,22 @@ const Home = () => {
           }} className="w-full">
               <CarouselContent>
                 {testimonials.map((testimonial, index) => <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/1">
-                    <div className="bg-card p-8 rounded-lg shadow-elegant h-full mx-2">
+                    <div className="bg-card p-8 rounded-lg shadow-elegant h-full mx-2 flex flex-col">
                       <Quote className="text-primary mb-4" size={40} />
                       <p className="text-foreground mb-6 text-lg italic">"{testimonial.content}"</p>
-                      <div className="flex items-center gap-1 mb-4">
-                        {[...Array(5)].map((_, i) => {})}
-                      </div>
-                      <div>
+                      <div className="mb-4">
                         <p className="font-bold text-foreground">{testimonial.name}</p>
                         <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                      </div>
+                      <div className="mt-auto">
+                        <a 
+                          href={testimonial.website} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline text-sm font-medium inline-flex items-center gap-1"
+                        >
+                          Visitar site <ArrowRight size={16} />
+                        </a>
                       </div>
                     </div>
                   </CarouselItem>)}
