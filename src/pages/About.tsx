@@ -126,19 +126,19 @@ const About = () => {
           paddingBottom: '100px'
         }}>
             {/* Continuous horizontal line with animation */}
-            <div className={`absolute top-1/2 -translate-y-1/2 left-[50px] right-[50px] h-0.5 bg-primary/30 hidden md:block transition-all duration-[2000ms] origin-left ${processStep4.isVisible ? 'scale-x-100' : 'scale-x-0'}`} />
+            <div className={`absolute top-1/2 -translate-y-1/2 left-[50px] right-[50px] h-0.5 bg-primary/30 hidden md:block transition-all duration-[2000ms] ease-out origin-left ${processStep1.isVisible ? 'scale-x-100' : 'scale-x-0'}`} />
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
-              {processSteps.map((step, index) => <div key={index} ref={stepAnimations[index].elementRef} className={`text-center relative transition-all duration-700 ${stepAnimations[index].isVisible ? 'animate-fade-up' : 'opacity-0'}`} style={{
-                  transitionDelay: `${index * 200}ms`
-                }}>
+              {processSteps.map((step, index) => <div key={index} ref={stepAnimations[index].elementRef} className="text-center relative">
                   {/* Dot on the line */}
-                  <div className={`hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary z-10 transition-all duration-500 ${stepAnimations[index].isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`} style={{
-                    transitionDelay: `${index * 200}ms`
+                  <div className={`hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary z-10 transition-all duration-700 ease-out ${stepAnimations[index].isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`} style={{
+                    transitionDelay: `${index * 400}ms`
                   }} />
                   
                   {/* Content positioned above or below */}
-                  <div className={`absolute left-1/2 -translate-x-1/2 w-full ${index % 2 === 0 ? 'bottom-1/2 pb-6' : 'top-1/2 pt-6'}`}>
+                  <div className={`absolute left-1/2 -translate-x-1/2 w-full transition-all duration-700 ease-out ${index % 2 === 0 ? 'bottom-1/2 pb-6' : 'top-1/2 pt-6'} ${stepAnimations[index].isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{
+                    transitionDelay: `${index * 400}ms`
+                  }}>
                     <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
                     <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
                     <p className="text-muted-foreground text-sm px-2">{step.description}</p>
