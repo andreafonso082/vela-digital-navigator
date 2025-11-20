@@ -189,10 +189,8 @@ const About = () => {
                   </p>
                 </div>
                 <div className="bg-card p-6 rounded-lg shadow-elegant">
-                  <h3 className="text-2xl font-bold text-primary mb-3">Restaurantes e Cafés</h3>
-                  <p className="text-muted-foreground">
-                    Sabemos como destacar menus online, gerir reservas e criar presença nas redes sociais que atrai clientes locais.
-                  </p>
+                  <h3 className="text-2xl font-bold text-primary mb-3">Clínicas Locais       </h3>
+                  <p className="text-muted-foreground">Seja a sua clínica de estética, dentária ou de animais de estimação, estará seguro connosco! Sabemos as estratégias e métodos para melhor mostrar o seu trabalho e as suas transformações! Faça com que os seus clientes o escolham a si, com toda a segurança e confiança.                                                                                          </p>
                 </div>
               </div>
             </div>
