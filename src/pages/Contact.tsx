@@ -143,8 +143,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-bold text-foreground mb-1">Email</h3>
-                      <p className="text-muted-foreground">info@velaagency.pt</p>
-                      <p className="text-muted-foreground">contato@velaagency.pt</p>
+                      <p className="text-muted-foreground">vela.web.team@gmail.com</p>
                     </div>
                   </div>
 
@@ -154,8 +153,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-bold text-foreground mb-1">Telefone</h3>
-                      <p className="text-muted-foreground">+351 912 345 678</p>
-                      <p className="text-muted-foreground">+351 913 456 789</p>
+                      <p className="text-muted-foreground">968 334 043</p>
                     </div>
                   </div>
 
