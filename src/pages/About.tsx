@@ -38,7 +38,7 @@ const About = () => {
   }, {
     step: "Passo 3",
     title: "Análise do Negócio",
-    description: "Analisamos o seu negócio para avaliar como o poderemos ajudar"
+    description: "Analisamos o seu negócio para avaliar como o iremos ajudar"
   }, {
     step: "Passo 4",
     title: "Sucesso",
