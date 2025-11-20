@@ -127,7 +127,7 @@ const About = () => {
         }}>
             {/* Continuous horizontal line with animation */}
             <div className="absolute top-1/2 -translate-y-1/2 left-[50px] right-[50px] h-0.5 bg-primary/30 hidden md:block">
-              <div className={`h-full bg-primary transition-all duration-[2000ms] ease-out origin-left ${processStep4.isVisible ? 'w-full' : 'w-0'}`} />
+              <div className={`h-full bg-primary transition-all duration-[2000ms] ease-out ${processStep1.isVisible ? 'w-full' : 'w-0'}`} />
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
