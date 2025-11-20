@@ -8,9 +8,9 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Core Brand Colors - Vela Agency */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    /* Core Brand Colors - Vela Agency (Dark Theme) */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
     
     /* Primary - Energetic Red */
     --primary: 0 86% 52%;
@@ -18,42 +18,42 @@ All colors MUST be HSL.
     --primary-hover: 0 86% 42%;
     
     /* Secondary - Professional Black */
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-hover: 0 0% 20%;
+    --secondary: 0 0% 5%;
+    --secondary-foreground: 0 0% 95%;
+    --secondary-hover: 0 0% 15%;
     
-    /* Accent - Subtle Gray for balance */
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 10%;
+    /* Accent - Subtle Dark Gray for balance */
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 95%;
     
-    /* Muted - Light backgrounds */
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    /* Muted - Dark backgrounds */
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
     
     /* Card */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
     
     /* Popover */
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
     
     /* Destructive */
     --destructive: 0 86% 52%;
     --destructive-foreground: 0 0% 100%;
     
     /* Border & Input */
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
     --ring: 0 86% 52%;
     
     --radius: 0.75rem;
     
     /* Custom Design Tokens */
     --gradient-hero: linear-gradient(135deg, hsl(0 86% 52%), hsl(0 86% 42%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
-    --shadow-elegant: 0 10px 40px -10px hsl(0 0% 0% / 0.1);
-    --shadow-strong: 0 20px 60px -15px hsl(0 0% 0% / 0.2);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 8%), hsl(0 0% 12%));
+    --shadow-elegant: 0 10px 40px -10px hsl(0 0% 0% / 0.3);
+    --shadow-strong: 0 20px 60px -15px hsl(0 0% 0% / 0.5);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
