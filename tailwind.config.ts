@@ -145,6 +145,10 @@ export default {
           },
           "94%": {
             transform: "translateX(-2px)",
+          },
+          "97%": {
+            transform: "translateX(2px)",
+          },
         },
         "pulse-strong": {
           "0%, 100%": {
@@ -154,10 +158,6 @@ export default {
           "50%": {
             opacity: "0.6",
             transform: "scale(1.15)",
-          },
-        },
-          "97%": {
-            transform: "translateX(2px)",
           },
         },
         "draw": {
