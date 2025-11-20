@@ -145,7 +145,17 @@ export default {
           },
           "94%": {
             transform: "translateX(-2px)",
+        },
+        "pulse-strong": {
+          "0%, 100%": {
+            opacity: "1",
+            transform: "scale(1)",
           },
+          "50%": {
+            opacity: "0.6",
+            transform: "scale(1.15)",
+          },
+        },
           "97%": {
             transform: "translateX(2px)",
           },
@@ -172,6 +182,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "pulse": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "pulse-strong": "pulse-strong 1s ease-in-out infinite",
         "fade-up": "fade-up 0.8s ease-out",
         "fade-down": "fade-down 0.8s ease-out",
         "fade-left": "fade-left 0.8s ease-out",
