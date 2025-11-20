@@ -6,36 +6,36 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
 const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    message: "",
+    message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     toast({
       title: "Mensagem enviada!",
-      description: "Responderemos em menos de 24 horas.",
+      description: "Responderemos em menos de 24 horas."
     });
-    
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -64,69 +64,31 @@ const Contact = () => {
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                     Nome *
                   </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full"
-                    placeholder="O seu nome"
-                  />
+                  <Input id="name" name="name" type="text" required value={formData.name} onChange={handleChange} className="w-full" placeholder="O seu nome" />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                     Email *
                   </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full"
-                    placeholder="seuemail@exemplo.com"
-                  />
+                  <Input id="email" name="email" type="email" required value={formData.email} onChange={handleChange} className="w-full" placeholder="seuemail@exemplo.com" />
                 </div>
 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
                     Telefone
                   </label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full"
-                    placeholder="+351 912 345 678"
-                  />
+                  <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} className="w-full" placeholder="+351 912 345 678" />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                     Mensagem *
                   </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full min-h-[150px]"
-                    placeholder="Conte-nos sobre o seu projeto..."
-                  />
+                  <Textarea id="message" name="message" required value={formData.message} onChange={handleChange} className="w-full min-h-[150px]" placeholder="Conte-nos sobre o seu projeto..." />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  className="w-full bg-primary hover:bg-primary-hover text-primary-foreground"
-                  size="lg"
-                >
+                <Button type="submit" className="w-full bg-primary hover:bg-primary-hover text-primary-foreground" size="lg">
                   Enviar Mensagem
                 </Button>
               </form>
@@ -174,8 +136,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-bold text-foreground mb-1">Horário</h3>
-                      <p className="text-muted-foreground">Segunda a Sexta: 9h - 18h</p>
-                      <p className="text-muted-foreground">Fim de semana: Fechado</p>
+                      <p className="text-muted-foreground py-0">Domingo a Sexta: 9h - 20h </p>
+                      <p className="text-muted-foreground">Sábado: 9h-12h</p>
                     </div>
                   </div>
                 </div>
@@ -194,8 +156,6 @@ const Contact = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
