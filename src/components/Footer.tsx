@@ -11,9 +11,7 @@ const Footer = () => {
               <img alt="Vela Agency" className="h-8 w-8" src="/lovable-uploads/975ed2ad-8a3a-46d6-94e0-3f50842ccc3a.png" />
               <span className="text-xl font-bold">Vela</span>
             </div>
-            <p className="text-secondary-foreground/80 text-sm">
-              Marketing profissional, rápido e acessível para pequenos negócios.
-            </p>
+            
           </div>
 
           {/* Links */}
