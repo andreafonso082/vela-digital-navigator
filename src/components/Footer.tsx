@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 import velaLogo from "@/assets/vela-logo.png";
 
 const Footer = () => {
@@ -72,6 +72,17 @@ const Footer = () => {
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/80">
                 <MapPin size={16} className="text-primary" />
                 <span>Algarve, Portugal</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm text-secondary-foreground/80">
+                <Instagram size={16} className="text-primary" />
+                <a 
+                  href="https://www.instagram.com/agencia_vela/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  @agencia_vela
+                </a>
               </li>
             </ul>
           </div>
