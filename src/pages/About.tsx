@@ -8,7 +8,6 @@ const About = () => {
   const missionSection = useScrollAnimation();
   const valuesSection = useScrollAnimation();
   const specializationSection = useScrollAnimation();
-  
   const values = [{
     icon: Target,
     title: "Transparência",
@@ -56,15 +55,10 @@ const About = () => {
                   tornavam o marketing digital um luxo inalcançável.
                 </p>
                 <p>
-                  Dois sócios com experiência em marketing e design decidiram mudar isso. 
-                  Criámos uma agência diferente: rápida, acessível e sem complicações. 
-                  Como uma caravela que navega com agilidade, a Vela leva os pequenos negócios 
-                  para novos horizontes digitais.
+                  Dois sócios com experiência em marketing e design decidiram mudar isso. Criámos uma agência diferente: rápida, acessível e sem complicações. Como os nossos antepassados portugueses navegaram e descobriram o mundo, também nós queremos ajudar os nossos parceiros a navegar as marés do digital!                                                                            
                 </p>
                 <p>
-                  Hoje, especializamo-nos em servir arquitetos e negócios locais, oferecendo 
-                  soluções personalizadas que cabem em qualquer orçamento. Porque acreditamos 
-                  que todos merecem ter uma presença digital profissional.
+                  Hoje, especializamo-nos em servir negócios locais, oferecendo soluções personalizadas que cabem em qualquer orçamento. Porque acreditamos que todos merecem ter uma presença digital profissional.
                 </p>
               </div>
             </div>
@@ -118,24 +112,22 @@ const About = () => {
               Especialização que Faz a Diferença
             </h2>
             <div className="space-y-6 text-muted-foreground">
-              <p>
+              <p className="text-center">
                 Ao contrário de agências generalistas, focamo-nos em entender profundamente 
                 as necessidades específicas dos nossos clientes. Esta especialização permite-nos 
                 criar soluções mais eficazes e personalizadas.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                 <div className="bg-card p-6 rounded-lg shadow-elegant">
-                  <h3 className="text-2xl font-bold text-primary mb-3">Arquitetos</h3>
+                  <h3 className="text-2xl font-bold text-primary mb-3">Arquitetos e Engenheiros Civis                    </h3>
                   <p className="text-muted-foreground">
-                    Compreendemos a importância de portfolios visuais impactantes e 
-                    otimização para pesquisas locais de serviços de arquitetura.
+                    Compreendemos a importância de portfolios visuais impactantes e otimização para pesquisas locais de serviços de arquitetura. Toda a gente merece a oportunidade de ter uma boa casa. Por isso ajudamos ass pessoas que tratam das suas casa para que elas a possam ajudar a si de maneira mais eficiente!                                            
                   </p>
                 </div>
                 <div className="bg-card p-6 rounded-lg shadow-elegant">
-                  <h3 className="text-2xl font-bold text-primary mb-3">Negócios Locais</h3>
+                  <h3 className="text-2xl font-bold text-primary mb-3">Clínicas Locais   </h3>
                   <p className="text-muted-foreground">
-                    Sabemos como destacar negócios locais nas pesquisas do Google e 
-                    criar presença online que converte visitantes em clientes.
+                    Seja você uma clínica de estética, dentária ou até de animais de estimação, sabemos o que fazer no que toca a dar a conhecer os seus serviços e a mostrar ao mundo o que já fizeram pelos vossos clientes!                                                                                        
                   </p>
                 </div>
               </div>
