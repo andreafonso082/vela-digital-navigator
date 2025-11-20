@@ -9,6 +9,7 @@ import heroImage from "@/assets/hero-caravel.jpg";
 import websiteImage from "@/assets/service-website.jpg";
 import socialImage from "@/assets/service-social.jpg";
 import photoImage from "@/assets/service-photo.jpg";
+import specialistsBg from "@/assets/specialists-bg.avif";
 const Home = () => {
   const servicesSection = useScrollAnimation();
   const pillarsSection = useScrollAnimation();
@@ -148,8 +149,13 @@ const Home = () => {
       </section>
 
       {/* Specialists Section */}
-      <section ref={specialistsSection.elementRef} className="py-20 bg-secondary text-secondary-foreground">
-        <div className={`container mx-auto px-4 text-center transition-all duration-700 ${specialistsSection.isVisible ? 'animate-scale-up' : 'opacity-0'}`}>
+      <section ref={specialistsSection.elementRef} className="relative py-20 text-white">
+        <div className="absolute inset-0 z-0" style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${specialistsBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }} />
+        <div className={`container mx-auto px-4 text-center relative z-10 transition-all duration-700 ${specialistsSection.isVisible ? 'animate-scale-up' : 'opacity-0'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Especialistas em pequenos negócios <span className="text-primary">e arquitetos</span>
           </h2>
