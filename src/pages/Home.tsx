@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Zap, Target, Palette, CheckCircle2, ArrowRight, Quote } from "lucide-react";
+import { Zap, Target, Palette, ArrowRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
@@ -15,7 +15,6 @@ const Home = () => {
   const specialistsSection = useScrollAnimation();
   const testimonialsSection = useScrollAnimation();
   const ctaSection = useScrollAnimation();
-  
   const services = [{
     title: "Websites Profissionais",
     description: "Websites modernos e responsivos desde 400€",
@@ -173,31 +172,24 @@ const Home = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full"
-            >
+            <Carousel opts={{
+            align: "start",
+            loop: true
+          }} className="w-full">
               <CarouselContent>
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/1">
+                {testimonials.map((testimonial, index) => <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/1">
                     <div className="bg-card p-8 rounded-lg shadow-elegant h-full mx-2">
                       <Quote className="text-primary mb-4" size={40} />
                       <p className="text-foreground mb-6 text-lg italic">"{testimonial.content}"</p>
                       <div className="flex items-center gap-1 mb-4">
-                        {[...Array(5)].map((_, i) => (
-                          <CheckCircle2 key={i} size={20} className="text-primary fill-primary" />
-                        ))}
+                        {[...Array(5)].map((_, i) => {})}
                       </div>
                       <div>
                         <p className="font-bold text-foreground">{testimonial.name}</p>
                         <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                       </div>
                     </div>
-                  </CarouselItem>
-                ))}
+                  </CarouselItem>)}
               </CarouselContent>
               <CarouselPrevious className="bg-card border-border text-foreground hover:bg-accent" />
               <CarouselNext className="bg-card border-border text-foreground hover:bg-accent" />
