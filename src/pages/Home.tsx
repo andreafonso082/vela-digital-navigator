@@ -3,11 +3,18 @@ import { Zap, Target, Palette, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import heroImage from "@/assets/hero-caravel.jpg";
 import websiteImage from "@/assets/service-website.jpg";
 import socialImage from "@/assets/service-social.jpg";
 import photoImage from "@/assets/service-photo.jpg";
 const Home = () => {
+  const servicesSection = useScrollAnimation();
+  const pillarsSection = useScrollAnimation();
+  const specialistsSection = useScrollAnimation();
+  const testimonialsSection = useScrollAnimation();
+  const ctaSection = useScrollAnimation();
+  
   const services = [{
     title: "Websites Profissionais",
     description: "Websites modernos e responsivos desde 400€",
@@ -82,8 +89,8 @@ const Home = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="py-20 bg-accent">
-        <div className="container mx-auto px-4">
+      <section ref={servicesSection.elementRef} className="py-20 bg-accent">
+        <div className={`container mx-auto px-4 transition-all duration-700 ${servicesSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Os Nossos Serviços
@@ -117,8 +124,8 @@ const Home = () => {
       </section>
 
       {/* Why Choose Vela */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section ref={pillarsSection.elementRef} className="py-20">
+        <div className={`container mx-auto px-4 transition-all duration-700 ${pillarsSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Porque escolher a Vela
@@ -138,8 +145,8 @@ const Home = () => {
       </section>
 
       {/* Specialists Section */}
-      <section className="py-20 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4 text-center">
+      <section ref={specialistsSection.elementRef} className="py-20 bg-secondary text-secondary-foreground">
+        <div className={`container mx-auto px-4 text-center transition-all duration-700 ${specialistsSection.isVisible ? 'animate-scale-up' : 'opacity-0'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Especialistas em pequenos negócios <span className="text-primary">e arquitetos</span>
           </h2>
@@ -156,8 +163,8 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section ref={testimonialsSection.elementRef} className="py-20">
+        <div className={`container mx-auto px-4 transition-all duration-700 ${testimonialsSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               O que dizem os nossos clientes
@@ -180,8 +187,8 @@ const Home = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-hero">
-        <div className="container mx-auto px-4 text-center">
+      <section ref={ctaSection.elementRef} className="py-20 bg-gradient-hero">
+        <div className={`container mx-auto px-4 text-center transition-all duration-700 ${ctaSection.isVisible ? 'animate-scale-up' : 'opacity-0'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Pronto para começar?
           </h2>

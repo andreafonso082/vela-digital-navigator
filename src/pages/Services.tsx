@@ -1,11 +1,15 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import websiteImage from "@/assets/service-website.jpg";
 import socialImage from "@/assets/service-social.jpg";
 import photoImage from "@/assets/service-photo.jpg";
 
 const Services = () => {
+  const servicesGrid = useScrollAnimation();
+  const packagesSection = useScrollAnimation();
+  
   const services = [
     {
       title: "Criação de Websites",
@@ -112,8 +116,8 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section ref={servicesGrid.elementRef} className="py-20">
+        <div className={`container mx-auto px-4 transition-all duration-700 ${servicesGrid.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
               <ServiceCard
@@ -130,8 +134,8 @@ const Services = () => {
       </section>
 
       {/* Packages Info */}
-      <section className="py-20 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4">
+      <section ref={packagesSection.elementRef} className="py-20 bg-secondary text-secondary-foreground">
+        <div className={`container mx-auto px-4 transition-all duration-700 ${packagesSection.isVisible ? 'animate-scale-up' : 'opacity-0'}`}>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Pacotes Personalizados</h2>
             <p className="text-xl text-secondary-foreground/90 mb-8">

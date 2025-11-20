@@ -1,8 +1,14 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Target, Zap, Users, Heart } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import velaLogo from "@/assets/vela-logo.png";
 const About = () => {
+  const storySection = useScrollAnimation();
+  const missionSection = useScrollAnimation();
+  const valuesSection = useScrollAnimation();
+  const specializationSection = useScrollAnimation();
+  
   const values = [{
     icon: Target,
     title: "Transparência",
@@ -38,8 +44,8 @@ const About = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section ref={storySection.elementRef} className="py-20">
+        <div className={`container mx-auto px-4 transition-all duration-700 ${storySection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
               <h2 className="text-4xl font-bold text-foreground mb-6">A Nossa História</h2>
@@ -70,8 +76,8 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4">
+      <section ref={missionSection.elementRef} className="py-20 bg-secondary text-secondary-foreground">
+        <div className={`container mx-auto px-4 transition-all duration-700 ${missionSection.isVisible ? 'animate-scale-up' : 'opacity-0'}`}>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">A Nossa Missão</h2>
             <p className="text-xl text-secondary-foreground/90 leading-relaxed">
@@ -85,8 +91,8 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section ref={valuesSection.elementRef} className="py-20">
+        <div className={`container mx-auto px-4 transition-all duration-700 ${valuesSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-foreground mb-4">Os Nossos Valores</h2>
             <p className="text-xl text-muted-foreground">O que nos guia em cada projeto</p>
@@ -105,8 +111,8 @@ const About = () => {
       </section>
 
       {/* Team Focus Section */}
-      <section className="py-20 bg-accent">
-        <div className="container mx-auto px-4">
+      <section ref={specializationSection.elementRef} className="py-20 bg-accent">
+        <div className={`container mx-auto px-4 transition-all duration-700 ${specializationSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-foreground mb-6 text-center">
               Especialização que Faz a Diferença
