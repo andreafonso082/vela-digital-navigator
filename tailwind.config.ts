@@ -134,14 +134,20 @@ export default {
           },
         },
         "shake": {
-          "0%, 100%": {
+          "0%, 85%, 100%": {
             transform: "translateX(0)",
           },
-          "10%, 30%, 50%, 70%, 90%": {
-            transform: "translateX(-4px)",
+          "88%": {
+            transform: "translateX(-2px)",
           },
-          "20%, 40%, 60%, 80%": {
-            transform: "translateX(4px)",
+          "91%": {
+            transform: "translateX(2px)",
+          },
+          "94%": {
+            transform: "translateX(-2px)",
+          },
+          "97%": {
+            transform: "translateX(2px)",
           },
         },
         "draw": {
@@ -171,7 +177,7 @@ export default {
         "fade-left": "fade-left 0.8s ease-out",
         "fade-right": "fade-right 0.8s ease-out",
         "scale-up": "scale-up 0.6s ease-out",
-        "shake": "shake 0.5s ease-in-out infinite",
+        "shake": "shake 3s ease-in-out infinite",
         "draw": "draw 2s ease-in-out infinite",
       },
     },
