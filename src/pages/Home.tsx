@@ -64,13 +64,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">
         <div className="absolute inset-0 z-0">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
             <source src={heroVideo} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-black/60" />
@@ -79,7 +73,7 @@ const Home = () => {
         <div className="container mx-auto px-4 z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Marketing profissional <br />
-            <span className="text-primary">rápido e acessível</span>
+            <span className="text-primary">Rápido e Acessível</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
             Websites, SEO, Google Meu Negócio, redes sociais e muito mais — tudo ao alcance do seu orçamento.
@@ -139,18 +133,14 @@ const Home = () => {
         <div className={`container mx-auto px-4 transition-all duration-700 ${pillarsSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Porque escolher a Vela
+              Porquê escolher a Vela
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pillars.map((pillar, index) => <div key={index} className="text-center p-8 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-                  {typeof pillar.icon === 'string' ? (
-                    <span className="text-primary text-3xl font-bold">{pillar.icon}</span>
-                  ) : (
-                    <pillar.icon size={32} className="text-primary" />
-                  )}
+                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary/10 mb-6">
+                  {typeof pillar.icon === 'string' ? <span className="text-primary text-3xl font-bold">{pillar.icon}</span> : <pillar.icon size={32} className="text-primary" />}
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">{pillar.title}</h3>
                 <p className="text-muted-foreground">{pillar.description}</p>
@@ -162,17 +152,16 @@ const Home = () => {
       {/* Specialists Section */}
       <section ref={specialistsSection.elementRef} className="relative py-20 text-white">
         <div className="absolute inset-0 z-0" style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${specialistsBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }} />
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${specialistsBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }} />
         <div className={`container mx-auto px-4 text-center relative z-10 transition-all duration-700 ${specialistsSection.isVisible ? 'animate-scale-up' : 'opacity-0'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Especialistas em pequenos negócios <span className="text-primary">e arquitetos</span>
+            Especialistas em pequenos negócios 
           </h2>
           <p className="text-xl text-secondary-foreground/80 max-w-3xl mx-auto mb-8">
-            Entendemos as necessidades específicas de pequenos negócios e profissionais independentes. 
-            Criamos soluções personalizadas que cabem no seu orçamento e entregam resultados.
+            Entendemos as necessidades específicas de pequenos negócios e profissionais independentes. Criamos soluções personalizadas que cabem no seu orçamento e entregam os melhores resultados.
           </p>
           <Link to="/about">
             <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-secondary">
@@ -206,12 +195,7 @@ const Home = () => {
                           <p className="font-bold text-foreground">{testimonial.name}</p>
                           <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                         </div>
-                        <a 
-                          href={testimonial.website} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-primary hover:underline text-sm font-medium inline-flex items-center gap-1 whitespace-nowrap"
-                        >
+                        <a href={testimonial.website} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm font-medium inline-flex items-center gap-1 whitespace-nowrap">
                           Visitar site <ArrowRight size={16} />
                         </a>
                       </div>
