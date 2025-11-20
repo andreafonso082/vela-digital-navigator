@@ -111,16 +111,33 @@ const About = () => {
             <p className="text-xl text-muted-foreground">O caminho para o sucesso do seu negócio</p>
           </div>
 
-          <div className="max-w-4xl mx-auto relative">
+          <div className="max-w-6xl mx-auto relative py-16">
             {/* Continuous horizontal line */}
-            <div className="absolute top-8 left-[50px] right-[50px] h-0.5 bg-primary/30 hidden md:block" />
+            <div className="absolute top-1/2 -translate-y-1/2 left-[50px] right-[50px] h-0.5 bg-primary/30 hidden md:block" />
             
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 relative">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
               {processSteps.map((step, index) => (
-                <div key={index} className="flex-1 text-center relative">
-                  <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
-                  <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground text-sm">{step.description}</p>
+                <div 
+                  key={index} 
+                  className={`text-center relative ${
+                    index % 2 === 0 
+                      ? 'md:pb-32' 
+                      : 'md:pt-32'
+                  }`}
+                >
+                  <div className={index % 2 === 0 ? '' : 'md:mt-auto'}>
+                    <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
+                    <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
+                    <p className="text-muted-foreground text-sm">{step.description}</p>
+                  </div>
+                  {/* Dot on the line */}
+                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary" 
+                    style={{ 
+                      top: index % 2 === 0 ? 'auto' : '50%',
+                      bottom: index % 2 === 0 ? '50%' : 'auto',
+                      transform: 'translate(-50%, 50%)'
+                    }} 
+                  />
                 </div>
               ))}
             </div>
