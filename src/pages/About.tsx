@@ -26,7 +26,6 @@ const About = () => {
     title: "Dedicação",
     description: "Tratamos o seu negócio como se fosse nosso."
   }];
-
   const processSteps = [{
     step: "Passo 1",
     title: "Primeiro Contacto",
@@ -104,38 +103,32 @@ const About = () => {
       </section>
 
       {/* Process Timeline Section */}
-      <section ref={processSection.elementRef} className="py-20">
+      <section ref={processSection.elementRef} className="py-20 mb-0">
         <div className={`container mx-auto px-4 transition-all duration-700 ${processSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Como Trabalhamos</h2>
-            <p className="text-xl text-muted-foreground">O caminho para o sucesso do seu negócio</p>
+            <h2 className="text-4xl font-bold text-foreground mb-0">Como Trabalhamos</h2>
+            
           </div>
 
-          <div className="max-w-6xl mx-auto relative" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
+          <div className="max-w-6xl mx-auto relative" style={{
+          paddingTop: '120px',
+          paddingBottom: '120px'
+        }}>
             {/* Continuous horizontal line */}
             <div className="absolute top-1/2 -translate-y-1/2 left-[50px] right-[50px] h-0.5 bg-primary/30 hidden md:block" />
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
-              {processSteps.map((step, index) => (
-                <div 
-                  key={index} 
-                  className="text-center relative"
-                >
+              {processSteps.map((step, index) => <div key={index} className="text-center relative">
                   {/* Dot on the line */}
                   <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary z-10" />
                   
                   {/* Content positioned above or below */}
-                  <div className={`absolute left-1/2 -translate-x-1/2 w-full ${
-                    index % 2 === 0 
-                      ? 'bottom-1/2 pb-6' 
-                      : 'top-1/2 pt-6'
-                  }`}>
+                  <div className={`absolute left-1/2 -translate-x-1/2 w-full ${index % 2 === 0 ? 'bottom-1/2 pb-6' : 'top-1/2 pt-6'}`}>
                     <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
                     <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
                     <p className="text-muted-foreground text-sm px-2">{step.description}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -150,15 +143,13 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300">
+            {values.map((value, index) => <div key={index} className="text-center p-6 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
                   <value.icon size={32} className="text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">{value.title}</h3>
                 <p className="text-muted-foreground text-sm">{value.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
