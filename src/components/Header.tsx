@@ -27,20 +27,14 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <img alt="Vela Agency" className="h-8 w-8 transition-transform group-hover:scale-105" src="/lovable-uploads/894b6f27-88af-476b-a469-db2ace67eb75.png" />
-            <span className="text-xl font-bold text-foreground hidden sm:inline">Vela</span>
+            
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
-            {navLinks.map(link => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="text-foreground/80 hover:text-primary transition-colors font-medium"
-              >
+            {navLinks.map(link => <Link key={link.path} to={link.path} className="text-foreground/80 hover:text-primary transition-colors font-medium">
                 {link.name}
-              </Link>
-            ))}
+              </Link>)}
             <Link to="/quote">
               <Button variant="default" size="sm" className="bg-primary hover:bg-primary-hover text-primary-foreground rounded-full">
                 Pedir Orçamento
