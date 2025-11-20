@@ -184,16 +184,16 @@ const Home = () => {
                     <div className="bg-card p-8 rounded-lg shadow-elegant h-full mx-2 flex flex-col">
                       <Quote className="text-primary mb-4" size={40} />
                       <p className="text-foreground mb-6 text-lg italic">"{testimonial.content}"</p>
-                      <div className="mb-4">
-                        <p className="font-bold text-foreground">{testimonial.name}</p>
-                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                      </div>
-                      <div className="mt-auto">
+                      <div className="flex items-start justify-between gap-4">
+                        <div>
+                          <p className="font-bold text-foreground">{testimonial.name}</p>
+                          <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        </div>
                         <a 
                           href={testimonial.website} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-primary hover:underline text-sm font-medium inline-flex items-center gap-1"
+                          className="text-primary hover:underline text-sm font-medium inline-flex items-center gap-1 whitespace-nowrap"
                         >
                           Visitar site <ArrowRight size={16} />
                         </a>
