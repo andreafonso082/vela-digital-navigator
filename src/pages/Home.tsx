@@ -184,7 +184,7 @@ const Home = () => {
                     <div className="bg-card p-8 rounded-lg shadow-elegant h-full mx-2 flex flex-col">
                       <Quote className="text-primary mb-4" size={40} />
                       <p className="text-foreground mb-6 text-lg italic">"{testimonial.content}"</p>
-                      <div className="flex items-start justify-between gap-4">
+                      <div className="flex items-end justify-between gap-4">
                         <div>
                           <p className="font-bold text-foreground">{testimonial.name}</p>
                           <p className="text-sm text-muted-foreground">{testimonial.role}</p>
