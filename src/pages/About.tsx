@@ -111,16 +111,16 @@ const About = () => {
             <p className="text-xl text-muted-foreground">O caminho para o sucesso do seu negócio</p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto relative">
+            {/* Continuous horizontal line */}
+            <div className="absolute top-8 left-[50px] right-[50px] h-0.5 bg-primary/30 hidden md:block" />
+            
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 relative">
               {processSteps.map((step, index) => (
-                <div key={index} className="flex-1 text-center">
+                <div key={index} className="flex-1 text-center relative">
                   <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
                   <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
                   <p className="text-muted-foreground text-sm">{step.description}</p>
-                  {index < processSteps.length - 1 && (
-                    <div className="hidden md:block absolute top-8 left-[calc(25%+2rem)] w-[calc(25%-4rem)] h-0.5 bg-primary/30" style={{ left: `calc(${(index + 1) * 25}% - 2rem)`, width: 'calc(25% - 4rem)' }} />
-                  )}
                 </div>
               ))}
             </div>
