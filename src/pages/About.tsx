@@ -111,7 +111,7 @@ const About = () => {
             <p className="text-xl text-muted-foreground">O caminho para o sucesso do seu negócio</p>
           </div>
 
-          <div className="max-w-6xl mx-auto relative py-16">
+          <div className="max-w-6xl mx-auto relative" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
             {/* Continuous horizontal line */}
             <div className="absolute top-1/2 -translate-y-1/2 left-[50px] right-[50px] h-0.5 bg-primary/30 hidden md:block" />
             
@@ -119,25 +119,21 @@ const About = () => {
               {processSteps.map((step, index) => (
                 <div 
                   key={index} 
-                  className={`text-center relative ${
-                    index % 2 === 0 
-                      ? 'md:pb-32' 
-                      : 'md:pt-32'
-                  }`}
+                  className="text-center relative"
                 >
-                  <div className={index % 2 === 0 ? '' : 'md:mt-auto'}>
+                  {/* Dot on the line */}
+                  <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary z-10" />
+                  
+                  {/* Content positioned above or below */}
+                  <div className={`absolute left-1/2 -translate-x-1/2 w-full ${
+                    index % 2 === 0 
+                      ? 'bottom-1/2 pb-6' 
+                      : 'top-1/2 pt-6'
+                  }`}>
                     <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
                     <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
-                    <p className="text-muted-foreground text-sm">{step.description}</p>
+                    <p className="text-muted-foreground text-sm px-2">{step.description}</p>
                   </div>
-                  {/* Dot on the line */}
-                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary" 
-                    style={{ 
-                      top: index % 2 === 0 ? 'auto' : '50%',
-                      bottom: index % 2 === 0 ? '50%' : 'auto',
-                      transform: 'translate(-50%, 50%)'
-                    }} 
-                  />
                 </div>
               ))}
             </div>
