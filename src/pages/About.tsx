@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Target, Zap, Users, Heart, MessageSquare, Calendar, Search, TrendingUp } from "lucide-react";
+import { Target, Zap, Users, Heart } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import velaLogo from "@/assets/vela-logo.png";
 const About = () => {
@@ -28,22 +28,18 @@ const About = () => {
   }];
 
   const processSteps = [{
-    icon: MessageSquare,
     step: "Passo 1",
     title: "Primeiro Contacto",
     description: "Seja contactado, contacte ou peça um orçamento"
   }, {
-    icon: Calendar,
     step: "Passo 2",
     title: "Reunião Online",
     description: "Marque uma reunião online, grátis e sem compromisso"
   }, {
-    icon: Search,
     step: "Passo 3",
     title: "Análise do Negócio",
     description: "Analisamos o seu negócio para avaliar como o poderemos ajudar"
   }, {
-    icon: TrendingUp,
     step: "Passo 4",
     title: "Sucesso",
     description: "Aplicamos as nossas melhores estratégias e métodos validados e juntos, crescemos o seu negócio como nunca antes!"
@@ -115,26 +111,16 @@ const About = () => {
             <p className="text-xl text-muted-foreground">O caminho para o sucesso do seu negócio</p>
           </div>
 
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 relative">
               {processSteps.map((step, index) => (
-                <div key={index} className="relative">
-                  {/* Connector Line */}
+                <div key={index} className="flex-1 text-center">
+                  <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground text-sm">{step.description}</p>
                   {index < processSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-12 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-primary/30 z-0" />
+                    <div className="hidden md:block absolute top-8 left-[calc(25%+2rem)] w-[calc(25%-4rem)] h-0.5 bg-primary/30" style={{ left: `calc(${(index + 1) * 25}% - 2rem)`, width: 'calc(25% - 4rem)' }} />
                   )}
-                  
-                  {/* Step Card */}
-                  <div className="relative bg-card p-6 rounded-lg shadow-elegant hover:shadow-strong transition-all duration-300 z-10">
-                    <div className="flex flex-col items-center text-center">
-                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                        <step.icon size={32} className="text-primary" />
-                      </div>
-                      <span className="text-sm font-semibold text-primary mb-2">{step.step}</span>
-                      <h3 className="text-xl font-bold text-foreground mb-3">{step.title}</h3>
-                      <p className="text-muted-foreground text-sm">{step.description}</p>
-                    </div>
-                  </div>
                 </div>
               ))}
             </div>
