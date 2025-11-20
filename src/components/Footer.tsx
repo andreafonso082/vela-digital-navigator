@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 import velaLogo from "@/assets/vela-logo.png";
-
 const Footer = () => {
-  return (
-    <footer className="bg-secondary text-secondary-foreground">
+  return <footer className="bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src={velaLogo} alt="Vela Agency" className="h-8 w-8" />
+              <img alt="Vela Agency" className="h-8 w-8" src="/lovable-uploads/975ed2ad-8a3a-46d6-94e0-3f50842ccc3a.png" />
               <span className="text-xl font-bold">Vela</span>
             </div>
             <p className="text-secondary-foreground/80 text-sm">
@@ -75,12 +73,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/80">
                 <Instagram size={16} className="text-primary" />
-                <a 
-                  href="https://www.instagram.com/agencia_vela/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
-                >
+                <a href="https://www.instagram.com/agencia_vela/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                   @agencia_vela
                 </a>
               </li>
@@ -94,8 +87,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
