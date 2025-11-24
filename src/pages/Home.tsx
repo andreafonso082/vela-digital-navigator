@@ -17,8 +17,8 @@ const Home = () => {
   const testimonialsSection = useScrollAnimation();
   const ctaSection = useScrollAnimation();
   const services = [{
-    title: "Websites Profissionais",
-    description: "Websites modernos e responsivos desde 400€",
+    title: "Websites Profissionais e Sites Baratos",
+    description: "Criação de websites modernos desde 400€",
     image: websiteImage
   }, {
     title: "Gestão de Redes Sociais",
@@ -39,8 +39,8 @@ const Home = () => {
     description: "Marketing profissional ao alcance de pequenos negócios"
   }, {
     icon: Pen,
-    title: "Design Moderno",
-    description: "Designs atuais e elegantes que destacam a sua marca"
+    title: "Web Design Moderno",
+    description: "Web design profissional e elegante que destaca a sua marca online"
   }];
   const testimonials = [{
     name: "João Silva",
@@ -72,11 +72,11 @@ const Home = () => {
         
         <div className="container mx-auto px-4 z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Marketing profissional <br />
-            <span className="text-primary">Rápido e Acessível</span>
+            Agência de Marketing Digital <br />
+            <span className="text-primary">no Algarve e Portugal</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Websites, SEO, Google Meu Negócio, redes sociais e muito mais — tudo ao alcance do seu orçamento.
+            Especialistas em criação de websites, web design, SEO, Google Meu Negócio e gestão de redes sociais. Sites baratos desde 400€. Marketing low-cost profissional para pequenos negócios.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/quote">
@@ -98,17 +98,17 @@ const Home = () => {
         <div className={`container mx-auto px-4 transition-all duration-700 ${servicesSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Os Nossos Serviços
+              Web Design e Serviços de Marketing Digital
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Soluções completas de marketing digital para pequenos negócios
+              Agência especializada em criação de websites, branding, gestão de redes sociais e otimização de negócios
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {services.map((service, index) => <div key={index} className="bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-strong transition-all duration-300 group">
                 <div className="relative h-64 overflow-hidden">
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <img src={service.image} alt={`${service.title} - Agência de Marketing Digital Vela`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2">{service.title}</h3>
@@ -158,10 +158,10 @@ const Home = () => {
       }} />
         <div className={`container mx-auto px-4 text-center relative z-10 transition-all duration-700 ${specialistsSection.isVisible ? 'animate-scale-up' : 'opacity-0'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Especialistas em pequenos negócios 
+            Agência de Marketing em Tavira e Algarve
           </h2>
           <p className="text-xl text-secondary-foreground/80 max-w-3xl mx-auto mb-8">
-            Entendemos as necessidades específicas de pequenos negócios e profissionais independentes. Criamos soluções personalizadas que cabem no seu orçamento e entregam os melhores resultados.
+            Especialistas digitais dedicados ao crescimento e impulsão de pequenos negócios. Oferecemos automatização, otimização de negócio e estratégias personalizadas de marketing low-cost que cabem no seu orçamento.
           </p>
           <Link to="/about">
             <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-secondary">

@@ -56,10 +56,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Sobre a <span className="text-primary">Vela</span>
+              Agência de Marketing Digital <span className="text-primary">Vela</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              A agência de marketing digital que navega ao lado dos pequenos negócios
+              Especialistas em web design, criação de websites e marketing em Portugal que navegam ao lado dos pequenos negócios
             </p>
           </div>
         </div>
@@ -86,7 +86,7 @@ const About = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <img alt="Vela Agency Logo" src="/lovable-uploads/4cd54715-777a-47f4-894a-5a1d6a206ac9.png" className="w-72 h-72 object-contain" />
+              <img alt="Agência de Marketing Digital Vela - Logo profissional" src="/lovable-uploads/4cd54715-777a-47f4-894a-5a1d6a206ac9.png" className="w-72 h-72 object-contain" />
             </div>
           </div>
         </div>
@@ -98,10 +98,10 @@ const About = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">A Nossa Missão</h2>
             <p className="text-xl text-secondary-foreground/90 leading-relaxed">
-              Digitalizar pequenos negócios através de serviços de marketing profissionais, 
-              rápidos e acessíveis. Acreditamos que qualquer negócio, independentemente do 
-              seu tamanho, merece ter ferramentas digitais de qualidade para crescer e competir 
-              no mercado atual.
+              Impulsão e crescimento de pequenos negócios através de serviços profissionais de marketing digital, 
+              web design e automatização. Como gestores de marketing especializados, acreditamos que qualquer negócio 
+              merece ter acesso a websites, branding e otimização digital de qualidade para crescer e competir 
+              no mercado atual com soluções low-cost.
             </p>
           </div>
         </div>

@@ -12,9 +12,9 @@ const Services = () => {
   
   const services = [
     {
-      title: "Criação de Websites",
+      title: "Criação de Websites e Web Design",
       price: "Desde 400€",
-      description: "Websites modernos, responsivos e otimizados para conversão. Inclui design personalizado, SEO básico e formação de gestão.",
+      description: "Sites baratos e profissionais, modernos e responsivos, otimizados para conversão. Web design personalizado com SEO básico incluído e formação de gestão.",
       image: websiteImage,
       features: [
         "Design moderno e responsivo",
@@ -54,9 +54,9 @@ const Services = () => {
       ],
     },
     {
-      title: "Criação de Logotipos",
+      title: "Branding e Criação de Logotipos",
       price: "50€",
-      description: "Logotipos modernos e minimalistas que representam perfeitamente a identidade da sua marca.",
+      description: "Criação de logo profissional, moderno e minimalista que representa a identidade da sua marca. Serviço completo de branding acessível.",
       image: websiteImage,
       features: [
         "3 propostas iniciais",
@@ -106,10 +106,10 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Os Nossos <span className="text-primary">Serviços</span>
+              Web Design, Branding e <span className="text-primary">Marketing Digital</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Soluções completas de marketing digital com preços claros e sem surpresas
+              Agência profissional de criação de websites, gestão de redes sociais, SEO e Google Meu Negócio com preços acessíveis
             </p>
           </div>
         </div>

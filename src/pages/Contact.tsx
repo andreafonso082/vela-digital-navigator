@@ -43,10 +43,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Entre em <span className="text-primary">Contacto</span>
+              Contacte a Nossa <span className="text-primary">Agência de Marketing</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Respondemos em menos de 24 horas. Vamos conversar sobre o seu projeto!
+              Especialistas em web design e marketing digital em Tavira, Algarve. Respondemos em menos de 24 horas!
             </p>
           </div>
         </div>
