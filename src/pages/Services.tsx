@@ -27,7 +27,7 @@ const Services = () => {
     },
     {
       title: "SEO e Google Meu Negócio",
-      price: "50€/mês",
+      price: "80€ ou 50€/mês",
       description: "Otimização contínua para motores de busca e gestão do perfil Google Meu Negócio para máxima visibilidade local.",
       image: websiteImage,
       features: [
