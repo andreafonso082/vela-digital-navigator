@@ -131,8 +131,7 @@ const About = () => {
               {processSteps.map((step, index) => (
                 <div 
                   key={index} 
-                  ref={stepAnimations[index].elementRef} 
-                  className={`bg-card p-6 rounded-lg shadow-elegant transition-all duration-700 ${stepAnimations[index].isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                  className={`bg-card p-6 rounded-lg shadow-elegant transition-all duration-700 ${processSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                   style={{ transitionDelay: `${index * 150}ms` }}
                 >
                   <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
