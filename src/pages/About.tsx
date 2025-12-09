@@ -144,7 +144,7 @@ const About = () => {
             {/* Desktop layout - timeline */}
             <div className="hidden md:grid md:grid-cols-4 gap-4">
               {processSteps.map((step, index) => (
-                <div key={index} ref={index === 0 ? undefined : stepAnimations[index].elementRef} className="text-center relative">
+                <div key={index} ref={stepAnimations[index].elementRef} className="text-center relative">
                   {/* Dot on the line */}
                   <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary z-10" />
                   
