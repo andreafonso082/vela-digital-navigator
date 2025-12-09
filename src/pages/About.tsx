@@ -120,29 +120,46 @@ const About = () => {
             
           </div>
 
-          <div className="max-w-6xl mx-auto relative" style={{
-          paddingTop: '100px',
-          paddingBottom: '100px'
-        }}>
-            {/* Continuous horizontal line with animation */}
+          <div className="max-w-6xl mx-auto relative md:py-[100px]">
+            {/* Continuous horizontal line with animation - desktop only */}
             <div className="absolute top-1/2 -translate-y-1/2 left-[50px] right-[50px] h-0.5 bg-primary/30 hidden md:block">
               <div className={`h-full bg-primary transition-all duration-[2000ms] ease-out ${processStep1.isVisible ? 'w-full' : 'w-0'}`} />
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
-              {processSteps.map((step, index) => <div key={index} ref={stepAnimations[index].elementRef} className="text-center relative">
-                  {/* Dot on the line - always visible */}
-                  <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary z-10" />
+            {/* Mobile layout - stacked cards */}
+            <div className="flex flex-col gap-6 md:hidden">
+              {processSteps.map((step, index) => (
+                <div 
+                  key={index} 
+                  ref={stepAnimations[index].elementRef} 
+                  className={`bg-card p-6 rounded-lg shadow-elegant transition-all duration-700 ${stepAnimations[index].isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                  style={{ transitionDelay: `${index * 150}ms` }}
+                >
+                  <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground text-sm">{step.description}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop layout - timeline */}
+            <div className="hidden md:grid md:grid-cols-4 gap-4">
+              {processSteps.map((step, index) => (
+                <div key={index} ref={index === 0 ? undefined : stepAnimations[index].elementRef} className="text-center relative">
+                  {/* Dot on the line */}
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary z-10" />
                   
                   {/* Content positioned above or below with directional animation */}
-                  <div className={`absolute left-1/2 -translate-x-1/2 w-full transition-all duration-700 ease-out ${index % 2 === 0 ? 'bottom-1/2 pb-6' : 'top-1/2 pt-6'} ${stepAnimations[index].isVisible ? 'opacity-100 translate-y-0' : `opacity-0 ${index % 2 === 0 ? '-translate-y-8' : 'translate-y-8'}`}`} style={{
-                transitionDelay: `${index * 500}ms`
-              }}>
+                  <div 
+                    className={`absolute left-1/2 -translate-x-1/2 w-full transition-all duration-700 ease-out ${index % 2 === 0 ? 'bottom-1/2 pb-6' : 'top-1/2 pt-6'} ${stepAnimations[index].isVisible ? 'opacity-100 translate-y-0' : `opacity-0 ${index % 2 === 0 ? '-translate-y-8' : 'translate-y-8'}`}`} 
+                    style={{ transitionDelay: `${index * 500}ms` }}
+                  >
                     <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
                     <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
                     <p className="text-muted-foreground text-sm px-2">{step.description}</p>
                   </div>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
         </div>
