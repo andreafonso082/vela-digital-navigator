@@ -75,9 +75,7 @@ const Home = () => {
             Agência de Marketing Digital <br />
             <span className="text-primary">no Algarve e Portugal</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Especialistas em criação de websites, web design, SEO, Google Meu Negócio e gestão de redes sociais. Sites baratos desde 400€. Marketing low-cost profissional para pequenos negócios.
-          </p>
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">Especialistas em criação de websites, web design, SEO, Google Meu Negócio e gestão de redes sociais. Sites desde 400€. Marketing low-cost profissional para pequenos negócios.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/quote">
               <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground text-lg px-8 py-6">
