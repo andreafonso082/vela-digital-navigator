@@ -25,7 +25,7 @@ const Quote = () => {
     "Gestão de Redes Sociais (120€/mês)",
     "Criação de Logotipo (70€)",
     "Fotografia Profissional (variável)",
-    "Vídeo Profissional (120€)",
+    "Vídeo Profissional (variável)",
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
