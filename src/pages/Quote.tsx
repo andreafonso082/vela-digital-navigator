@@ -24,7 +24,7 @@ const Quote = () => {
     "SEO e Google Meu Negócio (100 ou 70€/mês)",
     "Gestão de Redes Sociais (120€/mês)",
     "Criação de Logotipo (70€)",
-    "Fotografia Profissional (100€)",
+    "Fotografia Profissional (variável)",
     "Vídeo Profissional (120€)",
   ];
 
