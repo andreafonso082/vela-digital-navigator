@@ -8,7 +8,7 @@ import photoImage from "@/assets/service-photo.jpg";
 
 const Services = () => {
   const servicesGrid = useScrollAnimation();
-  const packagesSection = useScrollAnimation();
+  
   
   const services = [
     {
@@ -133,48 +133,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Packages Info */}
-      <section ref={packagesSection.elementRef} className="py-20 bg-secondary text-secondary-foreground">
-        <div className={`container mx-auto px-4 transition-all duration-700 ${packagesSection.isVisible ? 'animate-scale-up' : 'opacity-0'}`}>
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Pacotes Personalizados</h2>
-            <p className="text-xl text-secondary-foreground/90 mb-8">
-              Precisa de mais do que um serviço? Criamos pacotes personalizados que combinam 
-              múltiplos serviços com preços ainda mais competitivos.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-secondary-foreground/10 backdrop-blur-sm p-6 rounded-lg">
-                <h3 className="text-2xl font-bold mb-3">Pacote Inicial</h3>
-                <p className="text-4xl font-bold text-primary mb-4">450€</p>
-                <ul className="text-left space-y-2 text-sm">
-                  <li>✓ Website completo</li>
-                  <li>✓ Logotipo profissional</li>
-                  <li>✓ 1 mês de SEO incluído</li>
-                </ul>
-              </div>
-              <div className="bg-primary text-primary-foreground p-6 rounded-lg transform md:scale-105 shadow-strong">
-                <h3 className="text-2xl font-bold mb-3">Pacote Crescimento</h3>
-                <p className="text-4xl font-bold mb-4">130€/mês</p>
-                <ul className="text-left space-y-2 text-sm">
-                  <li>✓ Gestão de redes sociais</li>
-                  <li>✓ SEO contínuo</li>
-                  <li>✓ Relatórios mensais</li>
-                </ul>
-              </div>
-              <div className="bg-secondary-foreground/10 backdrop-blur-sm p-6 rounded-lg">
-                <h3 className="text-2xl font-bold mb-3">Pacote Premium</h3>
-                <p className="text-4xl font-bold text-primary mb-4">700€</p>
-                <ul className="text-left space-y-2 text-sm">
-                  <li>✓ Website + Logotipo</li>
-                  <li>✓ Fotografia profissional</li>
-                  <li>✓ Vídeo promocional</li>
-                  <li>✓ 2 meses SEO incluído</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
