@@ -69,7 +69,7 @@ const Services = () => {
     },
     {
       title: "Fotografia Profissional",
-      price: "Desde 100€",
+      price: "Variável",
       description: "Sessões fotográficas profissionais para mostrar o seu trabalho, espaço ou produtos com qualidade.",
       image: photoImage,
       features: [
