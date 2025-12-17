@@ -44,7 +44,7 @@ const Home = () => {
   }];
   const testimonials = [{
     name: "Paixão Criação",
-    role: "Arquiteto",
+    role: "Salão Cabeleireiro e Estética",
     content: "A Vela criou o meu website em tempo recorde. Profissionalismo e preço justo!",
     website: "https://example.com"
   }, {
