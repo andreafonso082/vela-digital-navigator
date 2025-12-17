@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Quote = () => {
@@ -18,6 +18,7 @@ const Quote = () => {
     services: [] as string[],
     description: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const services = [
     "Criação de Website (Desde 500€)",
@@ -28,22 +29,51 @@ const Quote = () => {
     "Vídeo Profissional (variável)",
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    toast({
-      title: "Pedido enviado com sucesso!",
-      description: "Receberá o seu orçamento gratuito em 24 horas.",
-    });
-    
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      services: [],
-      description: "",
-    });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mvgeyvwr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          services: formData.services.join(", "),
+          description: formData.description
+        })
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Pedido enviado com sucesso!",
+          description: "Receberá o seu orçamento gratuito em 24 horas.",
+        });
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          services: [],
+          description: "",
+        });
+      } else {
+        throw new Error("Erro ao enviar");
+      }
+    } catch (error) {
+      toast({
+        title: "Erro ao enviar",
+        description: "Por favor tente novamente ou contacte-nos diretamente.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -213,8 +243,16 @@ const Quote = () => {
                     type="submit" 
                     size="lg"
                     className="w-full bg-primary hover:bg-primary-hover text-primary-foreground text-lg py-6"
+                    disabled={isSubmitting}
                   >
-                    Receber Orçamento Gratuito
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                        A enviar...
+                      </>
+                    ) : (
+                      "Receber Orçamento Gratuito"
+                    )}
                   </Button>
                   <p className="text-center text-sm text-muted-foreground mt-4">
                     Ao enviar este formulário, concorda com a nossa política de privacidade
