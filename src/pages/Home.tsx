@@ -26,7 +26,7 @@ const Home = () => {
     image: socialImage
   }, {
     title: "Fotografia & Vídeo",
-    description: "Conteúdo visual profissional a partir de 100€",
+    description: "Conteúdo visual profissional!",
     image: photoImage
   }];
   const pillars = [{
