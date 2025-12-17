@@ -83,7 +83,7 @@ const Services = () => {
     },
     {
       title: "Vídeo Profissional",
-      price: "120€",
+      price: "Variável",
       description: "Vídeos curtos e impactantes para websites, redes sociais ou apresentações de projetos.",
       image: photoImage,
       features: [
