@@ -12,8 +12,8 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ title, description, price, image, features }: ServiceCardProps) => {
   return (
-    <div className="bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-strong transition-all duration-300 group">
-      <div className="relative h-48 overflow-hidden">
+    <div className="bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-strong transition-all duration-300 group h-full flex flex-col">
+      <div className="relative h-48 overflow-hidden flex-shrink-0">
         <img 
           src={image} 
           alt={title} 
@@ -24,12 +24,12 @@ const ServiceCard = ({ title, description, price, image, features }: ServiceCard
         </div>
       </div>
       
-      <div className="p-6 space-y-4">
+      <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-2xl font-bold text-foreground">{title}</h3>
-        <p className="text-muted-foreground">{description}</p>
+        <p className="text-muted-foreground mt-2">{description}</p>
         
         {features && features.length > 0 && (
-          <ul className="space-y-2">
+          <ul className="space-y-2 mt-4">
             {features.map((feature, index) => (
               <li key={index} className="flex items-start gap-2 text-sm text-foreground">
                 <div className="h-1.5 w-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
@@ -39,7 +39,7 @@ const ServiceCard = ({ title, description, price, image, features }: ServiceCard
           </ul>
         )}
         
-        <div className="flex gap-3 pt-4">
+        <div className="flex gap-3 pt-4 mt-auto">
           <Link to="/quote" className="flex-1">
             <Button className="w-full bg-primary hover:bg-primary-hover text-primary-foreground">
               Pedir Serviço
