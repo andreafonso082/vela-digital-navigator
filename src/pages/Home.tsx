@@ -46,7 +46,7 @@ const Home = () => {
     name: "Paixão Criação",
     role: "Salão Cabeleireiro e Estética",
     content: "A Vela fez um website com a cara do nosso salão, por um preço muito justo e com marcações online!",
-    website: "https://example.com"
+    website: "https://paixaocriacao.com"
   }, {
     name: "Maria Costa",
     role: "Proprietária de Café",
