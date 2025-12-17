@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 const Contact = () => {
   const {
@@ -16,18 +16,45 @@ const Contact = () => {
     phone: "",
     message: ""
   });
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Mensagem enviada!",
-      description: "Responderemos em menos de 24 horas."
-    });
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: ""
-    });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mqarjnap", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Mensagem enviada!",
+          description: "Responderemos em menos de 24 horas."
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: ""
+        });
+      } else {
+        throw new Error("Erro ao enviar");
+      }
+    } catch (error) {
+      toast({
+        title: "Erro ao enviar",
+        description: "Por favor tente novamente ou contacte-nos diretamente.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -88,8 +115,15 @@ const Contact = () => {
                   <Textarea id="message" name="message" required value={formData.message} onChange={handleChange} className="w-full min-h-[150px]" placeholder="Conte-nos sobre o seu projeto..." />
                 </div>
 
-                <Button type="submit" className="w-full bg-primary hover:bg-primary-hover text-primary-foreground" size="lg">
-                  Enviar Mensagem
+                <Button type="submit" className="w-full bg-primary hover:bg-primary-hover text-primary-foreground" size="lg" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      A enviar...
+                    </>
+                  ) : (
+                    "Enviar Mensagem"
+                  )}
                 </Button>
               </form>
             </div>
