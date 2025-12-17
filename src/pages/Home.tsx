@@ -50,7 +50,7 @@ const Home = () => {
   }, {
     name: "Maria Costa",
     role: "Proprietária de Café",
-    content: "O meu perfil do google não existia sequer! em dois dias fiquei em 9o de 38! Eles realmente sabem o que fazem!",
+    content: "O meu perfil do google não existia sequer, em dois dias fiquei em 9o de 38! Eles realmente sabem o que fazem!",
     website: "https://example.com"
   }, {
     name: "Pedro Santos",
