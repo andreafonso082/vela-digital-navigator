@@ -55,7 +55,7 @@ const Services = () => {
     },
     {
       title: "Branding e Criação de Logotipos",
-      price: "50€",
+      price: "70€",
       description: "Criação de logo profissional, moderno e minimalista que representa a identidade da sua marca. Serviço completo de branding acessível.",
       image: websiteImage,
       features: [
