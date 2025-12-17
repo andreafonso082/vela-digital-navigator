@@ -43,7 +43,7 @@ const Home = () => {
     description: "Web design profissional e elegante que destaca a sua marca online"
   }];
   const testimonials = [{
-    name: "João Silva",
+    name: "Paixão Criação",
     role: "Arquiteto",
     content: "A Vela criou o meu website em tempo recorde. Profissionalismo e preço justo!",
     website: "https://example.com"
