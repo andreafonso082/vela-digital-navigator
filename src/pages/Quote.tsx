@@ -20,7 +20,7 @@ const Quote = () => {
   });
 
   const services = [
-    "Criação de Website (400€)",
+    "Criação de Website (Desde 500€)",
     "SEO e Google Meu Negócio (50€/mês)",
     "Gestão de Redes Sociais (100€/mês)",
     "Criação de Logotipo (50€)",
