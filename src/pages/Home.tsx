@@ -18,7 +18,7 @@ const Home = () => {
   const ctaSection = useScrollAnimation();
   const services = [{
     title: "Websites Profissionais e Sites Baratos",
-    description: "Criação de websites modernos desde 400€",
+    description: "Criação de websites modernos desde 500€",
     image: websiteImage
   }, {
     title: "Gestão de Redes Sociais",
