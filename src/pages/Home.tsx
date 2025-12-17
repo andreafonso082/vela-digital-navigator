@@ -48,7 +48,7 @@ const Home = () => {
     content: "A Vela fez um website com a cara do nosso salão, por um preço muito justo e com marcações online!",
     website: "https://paixaocriacao.com"
   }, {
-    name: "Maria Costa",
+    name: "Ivânia Shiatsu",
     role: "Proprietária de Café",
     content: "O meu perfil do google não existia sequer, em dois dias fiquei em 9o de 38! Eles realmente sabem o que fazem!",
     website: "https://example.com"
