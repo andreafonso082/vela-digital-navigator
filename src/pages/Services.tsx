@@ -95,7 +95,6 @@ const Services = () => {
         "IA de automação de processos",
         "IA de chamadas telefónicas",
         "Treino com dados do seu negócio",
-        "Suporte e manutenção incluídos",
       ],
     },
   ];
