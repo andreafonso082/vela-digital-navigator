@@ -49,7 +49,7 @@ const Home = () => {
     website: "https://paixaocriacao.com"
   }, {
     name: "Ivânia Shiatsu",
-    role: "Massagista",
+    role: "Terapêuta",
     content: "O meu perfil do google não existia sequer, em dois dias fiquei em 9o de 38! Eles realmente sabem o que fazem!",
     website: "https://www.google.com/search?sca_esv=d59444dfc678413a&sxsrf=AE3TifM3lFWUURFob40-Ntz8C-vd0HXTKw:1765892273489&q=Iv%C3%A2nia+Shiatsu&si=AMgyJEs9DArPE9xmb5yVYVjpG4jqWDEKSIpCRSjmm88XZWnGNQSNN-pGzI8TV-PvyK080jNHQ8n-2joJ6VO8XCmmiWU-EsNroved10ls3CZPL1sXR3V2o47-ac_watO4PNoM4ELfgc0y&sa=X&ved=2ahUKEwj_4LCtncKRAxXaKvsDHQYQE_oHegQIKRAB&biw=1920&bih=911&dpr=1"
   }, {
