@@ -22,11 +22,11 @@ const Quote = () => {
 
   const services = [
     "Criação de Website (Desde 500€)",
-    "SEO e Google Meu Negócio (100 ou 70€/mês)",
-    "Gestão de Redes Sociais (120€/mês)",
-    "Criação de Logotipo (70€)",
-    "Fotografia Profissional (variável)",
-    "Vídeo Profissional (variável)",
+    "SEO e Google Meu Negócio (100€ ou 70€/mês)",
+    "Gestão de Redes Sociais (Desde 120€/mês)",
+    "Branding e Logotipo (70€)",
+    "Fotografia e Vídeo Profissional (variável)",
+    "Integração de Agente IA (Desde 1000€)",
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {

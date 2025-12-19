@@ -25,9 +25,9 @@ const Home = () => {
     description: "Presença consistente por apenas 120€/mês",
     image: socialImage
   }, {
-    title: "Fotografia & Vídeo",
-    description: "Conteúdo visual profissional!",
-    image: photoImage
+    title: "Integração de Agente IA",
+    description: "Automatize o seu negócio desde 1000€",
+    image: websiteImage
   }];
   const pillars = [{
     icon: Zap,
