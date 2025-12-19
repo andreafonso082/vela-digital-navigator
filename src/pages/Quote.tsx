@@ -26,7 +26,7 @@ const Quote = () => {
     "Gestão de Redes Sociais (Desde 120€/mês)",
     "Branding e Logotipo (70€)",
     "Fotografia e Vídeo Profissional (variável)",
-    "Integração de Agente IA (Desde 1000€)",
+    "Integração de Agentes IA (Desde 1000€)",
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
