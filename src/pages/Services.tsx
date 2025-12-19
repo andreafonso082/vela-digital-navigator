@@ -5,6 +5,9 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import websiteImage from "@/assets/service-website.jpg";
 import socialImage from "@/assets/service-social.jpg";
 import photoImage from "@/assets/service-photo.jpg";
+import seoImage from "@/assets/service-seo.jpg";
+import brandingImage from "@/assets/service-branding.jpg";
+import aiImage from "@/assets/service-ai.jpg";
 
 const Services = () => {
   const servicesGrid = useScrollAnimation();
@@ -29,7 +32,7 @@ const Services = () => {
       title: "SEO e Google Meu Negócio",
       price: "100€ ou 70€/mês",
       description: "Otimização contínua para motores de busca e gestão do perfil Google Meu Negócio para máxima visibilidade local.",
-      image: websiteImage,
+      image: seoImage,
       features: [
         "Otimização de palavras-chave",
         "Gestão Google Meu Negócio",
@@ -57,7 +60,7 @@ const Services = () => {
       title: "Branding e Criação de Logotipos",
       price: "70€",
       description: "Criação de logo profissional, moderno e minimalista que representa a identidade da sua marca. Serviço completo de branding acessível.",
-      image: websiteImage,
+      image: brandingImage,
       features: [
         "3 propostas iniciais",
         "2 rondas de revisões",
@@ -85,7 +88,7 @@ const Services = () => {
       title: "Integração de Agente IA",
       price: "Desde 1000€",
       description: "Agentes de inteligência artificial para automatizar a comunicação e processos do seu negócio através de chat, WhatsApp, chamadas e mais.",
-      image: websiteImage,
+      image: aiImage,
       features: [
         "IA de Chat para website",
         "IA de WhatsApp automatizado",

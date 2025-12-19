@@ -8,7 +8,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import heroVideo from "@/assets/hero-video.mp4";
 import websiteImage from "@/assets/service-website.jpg";
 import socialImage from "@/assets/service-social.jpg";
-import photoImage from "@/assets/service-photo.jpg";
+import aiImage from "@/assets/service-ai.jpg";
 import specialistsBg from "@/assets/specialists-bg.avif";
 const Home = () => {
   const servicesSection = useScrollAnimation();
@@ -27,7 +27,7 @@ const Home = () => {
   }, {
     title: "Integração de Agente IA",
     description: "Automatize o seu negócio desde 1000€",
-    image: websiteImage
+    image: aiImage
   }];
   const pillars = [{
     icon: Zap,
