@@ -24,7 +24,6 @@ const Services = () => {
         "SEO básico incluído",
         "Formulários de contacto",
         "Integração com redes sociais",
-        "Hospedagem incluída (1º ano)",
         "Formação de gestão básica",
       ],
     },
@@ -48,7 +47,7 @@ const Services = () => {
       description: "Presença consistente e profissional nas redes sociais com conteúdos planeados e publicações regulares.",
       image: socialImage,
       features: [
-        "3 publicações por semana",
+        "2 publicações por semana",
         "Design de posts profissionais",
         "Calendário de conteúdos",
         "Gestão de comentários",
@@ -62,12 +61,12 @@ const Services = () => {
       description: "Criação de logo profissional, moderno e minimalista que representa a identidade da sua marca. Serviço completo de branding acessível.",
       image: brandingImage,
       features: [
-        "3 propostas iniciais",
+        "Conjunto de mockups básicos incluído",
         "2 rondas de revisões",
         "Ficheiros em múltiplos formatos",
         "Versões a cores e preto/branco",
         "Manual básico de utilização",
-        "Entrega em 5 dias úteis",
+        "Entrega em 7 dias úteis",
       ],
     },
     {
@@ -77,8 +76,8 @@ const Services = () => {
       image: photoImage,
       features: [
         "Sessão fotográfica até 2 horas",
-        "20 fotografias editadas em alta resolução",
-        "Vídeo até 60 segundos",
+        "Fotografias editadas em alta resolução",
+        "Vídeos profissionais",
         "Edição e pós-produção completa",
         "Música e legendas incluídas",
         "Direitos de utilização ilimitados",
