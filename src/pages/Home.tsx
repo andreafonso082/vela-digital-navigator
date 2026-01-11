@@ -62,11 +62,11 @@ const Home = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-black pt-20">
+      <section className="relative min-h-screen flex items-center bg-black pt-20 overflow-hidden">
         <div className="container mx-auto px-4 z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-0 items-center">
             {/* Coluna esquerda - Texto */}
-            <div className="text-left order-2 lg:order-1">
+            <div className="text-left order-2 lg:order-1 relative z-20">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Agência de Marketing Digital <br />
                 <span className="text-primary">no Algarve e Portugal</span>
@@ -89,7 +89,7 @@ const Home = () => {
             </div>
             
             {/* Coluna direita - Animação 3D */}
-            <div className="h-[420px] lg:h-[600px] order-1 lg:order-2">
+            <div className="h-[450px] lg:h-[650px] order-1 lg:order-2 -mx-4 lg:mx-0 lg:-mr-8">
               <NauWidget />
             </div>
           </div>
