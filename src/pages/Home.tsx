@@ -5,7 +5,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import NauWidget from "@/components/NauWidget";
+import heroVideo from "@/assets/hero-video.mp4";
 import websiteImage from "@/assets/service-website.jpg";
 import socialImage from "@/assets/service-social.jpg";
 import aiImage from "@/assets/service-ai.jpg";
@@ -62,36 +62,31 @@ const Home = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-black pt-20 overflow-hidden">
-        <div className="container mx-auto px-4 z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-0 items-center">
-            {/* Coluna esquerda - Texto */}
-            <div className="text-left order-2 lg:order-1 relative z-20">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Agência de Marketing Digital <br />
-                <span className="text-primary">no Algarve e Portugal</span>
-              </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl">
-                Especialistas em criação de websites, web design, SEO, Google Meu Negócio e gestão de redes sociais. Sites desde 500€. Marketing low-cost profissional para pequenos negócios.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/quote">
-                  <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground text-lg px-8 py-6">
-                    Peça um orçamento
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white hover:text-secondary">
-                    Fale connosco
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            
-            {/* Coluna direita - Animação 3D */}
-            <div className="h-[450px] lg:h-[650px] order-1 lg:order-2 -mx-4 lg:mx-0 lg:-mr-8">
-              <NauWidget />
-            </div>
+      <section className="relative min-h-screen flex items-center justify-center pt-20">
+        <div className="absolute inset-0 z-0">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+        
+        <div className="container mx-auto px-4 z-10 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Agência de Marketing Digital <br />
+            <span className="text-primary">no Algarve e Portugal</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">Especialistas em criação de websites, web design, SEO, Google Meu Negócio e gestão de redes sociais. Sites desde 500€. Marketing low-cost profissional para pequenos negócios.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/quote">
+              <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground text-lg px-8 py-6">
+                Peça um orçamento
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white hover:text-secondary">
+                Fale connosco
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
