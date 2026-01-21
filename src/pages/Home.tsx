@@ -73,22 +73,30 @@ const Home = () => {
         
         <div className="container mx-auto px-4 z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight min-h-[1.2em]">
-            <TextType
-              text={[
-                "Bem-vindo à Vela!",
-                "A tua agência de marketing e webdesign no Algarve e...",
-                "todo Portugal!"
-              ]}
-              typingSpeed={75}
-              pauseDuration={2000}
-              deletingSpeed={50}
-              showCursor
-              cursorCharacter="|"
-              cursorBlinkDuration={0.5}
-              className="text-white"
-              highlightWords={["Vela!", "Algarve e...", "Portugal!"]}
-              highlightClassName="text-primary"
-            />
+            {/* Texto para SEO - visualmente oculto mas acessível a crawlers */}
+            <span className="sr-only">
+              Bem-vindo à Vela! A tua agência de marketing e webdesign no Algarve e todo Portugal!
+            </span>
+            
+            {/* Animação visível para utilizadores */}
+            <span aria-hidden="true">
+              <TextType
+                text={[
+                  "Bem-vindo à Vela!",
+                  "A tua agência de marketing e webdesign no Algarve e...",
+                  "todo Portugal!"
+                ]}
+                typingSpeed={75}
+                pauseDuration={2000}
+                deletingSpeed={50}
+                showCursor
+                cursorCharacter="|"
+                cursorBlinkDuration={0.5}
+                className="text-white"
+                highlightWords={["Vela!", "Algarve e...", "Portugal!"]}
+                highlightClassName="text-primary"
+              />
+            </span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">Especialistas em criação de websites, web design, SEO, Google Meu Negócio e gestão de redes sociais. Sites desde 500€. Marketing low-cost profissional para pequenos negócios.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
