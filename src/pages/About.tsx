@@ -56,7 +56,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Agência de Marketing Digital <span className="text-primary">Vela</span>
+              Descobre quem é a Agência       <span className="text-primary">Vela!</span>
             </h1>
             <p className="text-xl text-muted-foreground">
               Especialistas em web design, criação de websites e marketing em Portugal que navegam ao lado dos pequenos negócios
@@ -128,37 +128,30 @@ const About = () => {
             
             {/* Mobile layout - stacked cards */}
             <div className="flex flex-col gap-6 md:hidden">
-              {processSteps.map((step, index) => (
-                <div 
-                  key={index} 
-                  className={`bg-card p-6 rounded-lg shadow-elegant transition-all duration-700 ${processSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                  style={{ transitionDelay: `${index * 150}ms` }}
-                >
+              {processSteps.map((step, index) => <div key={index} className={`bg-card p-6 rounded-lg shadow-elegant transition-all duration-700 ${processSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+              transitionDelay: `${index * 150}ms`
+            }}>
                   <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
                   <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
                   <p className="text-muted-foreground text-sm">{step.description}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             {/* Desktop layout - timeline */}
             <div className="hidden md:grid md:grid-cols-4 gap-4">
-              {processSteps.map((step, index) => (
-                <div key={index} ref={stepAnimations[index].elementRef} className="text-center relative">
+              {processSteps.map((step, index) => <div key={index} ref={stepAnimations[index].elementRef} className="text-center relative">
                   {/* Dot on the line */}
                   <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary z-10" />
                   
                   {/* Content positioned above or below with directional animation */}
-                  <div 
-                    className={`absolute left-1/2 -translate-x-1/2 w-full transition-all duration-700 ease-out ${index % 2 === 0 ? 'bottom-1/2 pb-6' : 'top-1/2 pt-6'} ${stepAnimations[index].isVisible ? 'opacity-100 translate-y-0' : `opacity-0 ${index % 2 === 0 ? '-translate-y-8' : 'translate-y-8'}`}`} 
-                    style={{ transitionDelay: `${index * 500}ms` }}
-                  >
+                  <div className={`absolute left-1/2 -translate-x-1/2 w-full transition-all duration-700 ease-out ${index % 2 === 0 ? 'bottom-1/2 pb-6' : 'top-1/2 pt-6'} ${stepAnimations[index].isVisible ? 'opacity-100 translate-y-0' : `opacity-0 ${index % 2 === 0 ? '-translate-y-8' : 'translate-y-8'}`}`} style={{
+                transitionDelay: `${index * 500}ms`
+              }}>
                     <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
                     <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
                     <p className="text-muted-foreground text-sm px-2">{step.description}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
