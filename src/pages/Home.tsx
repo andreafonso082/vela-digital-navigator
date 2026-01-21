@@ -85,7 +85,9 @@ const Home = () => {
               showCursor
               cursorCharacter="|"
               cursorBlinkDuration={0.5}
-              className="text-primary"
+              className="text-white"
+              highlightWords={["Vela!", "Algarve e", "Portugal"]}
+              highlightClassName="text-primary"
             />
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">Especialistas em criação de websites, web design, SEO, Google Meu Negócio e gestão de redes sociais. Sites desde 500€. Marketing low-cost profissional para pequenos negócios.</p>
