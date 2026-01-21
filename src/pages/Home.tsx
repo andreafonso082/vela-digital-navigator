@@ -98,7 +98,7 @@ const Home = () => {
               />
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">Especialistas em criação de websites, web design, SEO, Google Meu Negócio e gestão de redes sociais. Sites desde 500€. Marketing low-cost profissional para pequenos negócios.</p>
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">Especialistas em criação de websites, web design, SEO, Google Meu Negócio e gestão de redes sociais. Sites desde <span className="text-primary font-semibold">500€</span>. Marketing low-cost profissional para pequenos negócios.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/quote">
               <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground text-lg px-8 py-6">
