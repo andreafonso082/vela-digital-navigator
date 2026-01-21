@@ -65,31 +65,66 @@ const TextType = ({
     return textColors[currentTextIndex % textColors.length];
   }, [textColors, currentTextIndex]);
 
-  const renderTextWithHighlights = useCallback((text: string) => {
+  const getHighlightRanges = useCallback((fullText: string) => {
+    const ranges: { start: number; end: number }[] = [];
+    highlightWords.forEach(word => {
+      let index = 0;
+      const lowerText = fullText.toLowerCase();
+      const lowerWord = word.toLowerCase();
+      while ((index = lowerText.indexOf(lowerWord, index)) !== -1) {
+        ranges.push({ start: index, end: index + word.length });
+        index += word.length;
+      }
+    });
+    return ranges.sort((a, b) => a.start - b.start);
+  }, [highlightWords]);
+
+  const renderTextWithHighlights = useCallback((displayedText: string, fullText: string) => {
     if (highlightWords.length === 0) {
-      return <span style={{ color: getCurrentTextColor() || 'inherit' }}>{text}</span>;
+      return <span style={{ color: getCurrentTextColor() || 'inherit' }}>{displayedText}</span>;
     }
 
-    const pattern = new RegExp(`(${highlightWords.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi');
-    const parts = text.split(pattern);
+    const ranges = getHighlightRanges(fullText);
+    const result: JSX.Element[] = [];
+    let lastIndex = 0;
 
-    return (
-      <>
-        {parts.map((part, index) => {
-          const isHighlight = highlightWords.some(w => w.toLowerCase() === part.toLowerCase());
-          return (
+    for (let i = 0; i < displayedText.length; i++) {
+      const inHighlight = ranges.some(r => i >= r.start && i < r.end);
+      const prevInHighlight = i > 0 ? ranges.some(r => (i - 1) >= r.start && (i - 1) < r.end) : !inHighlight;
+
+      if (inHighlight !== prevInHighlight || i === 0) {
+        if (i > lastIndex) {
+          const wasHighlight = ranges.some(r => lastIndex >= r.start && lastIndex < r.end);
+          result.push(
             <span
-              key={index}
-              className={isHighlight ? highlightClassName : ''}
-              style={{ color: !isHighlight ? (getCurrentTextColor() || 'inherit') : undefined }}
+              key={`${lastIndex}-${i}`}
+              className={wasHighlight ? highlightClassName : ''}
+              style={{ color: !wasHighlight ? (getCurrentTextColor() || 'inherit') : undefined }}
             >
-              {part}
+              {displayedText.slice(lastIndex, i)}
             </span>
           );
-        })}
-      </>
-    );
-  }, [highlightWords, highlightClassName, getCurrentTextColor]);
+        }
+        lastIndex = i;
+      }
+    }
+
+    // Push remaining text
+    if (lastIndex < displayedText.length) {
+      const isHighlight = ranges.some(r => lastIndex >= r.start && lastIndex < r.end);
+      result.push(
+        <span
+          key={`${lastIndex}-end`}
+          className={isHighlight ? highlightClassName : ''}
+          style={{ color: !isHighlight ? (getCurrentTextColor() || 'inherit') : undefined }}
+        >
+          {displayedText.slice(lastIndex)}
+        </span>
+      );
+    }
+
+    return <>{result}</>;
+  }, [highlightWords, highlightClassName, getCurrentTextColor, getHighlightRanges]);
 
   useEffect(() => {
     if (!startOnVisible || !containerRef.current) return;
@@ -198,7 +233,7 @@ const TextType = ({
       ref={containerRef}
       className={`inline-block whitespace-pre-wrap ${className}`}
     >
-      {renderTextWithHighlights(displayedText)}
+      {renderTextWithHighlights(displayedText, textArray[currentTextIndex])}
       {showCursor && (
         <span
           ref={cursorRef}
