@@ -22,7 +22,7 @@ const Header = () => {
     path: "/contact"
   }];
   return <header className="fixed top-4 left-0 right-0 z-50 px-4 md:px-8">
-      <nav className="mx-auto max-w-6xl bg-background/40 backdrop-blur-xl border border-border/30 rounded-full px-6 py-3 shadow-elegant">
+      <nav className="mx-auto max-w-6xl bg-background/40 backdrop-blur-xl border border-border/30 rounded-full px-6 py-3 shadow-elegant font-montserrat">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
