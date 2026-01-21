@@ -76,8 +76,8 @@ const Home = () => {
             <TextType
               text={[
                 "Bem-vindo à Vela!",
-                "A tua agência de marketing e webdesign no Algarve e",
-                "todo Portugal"
+                "A tua agência de marketing e webdesign no Algarve e...",
+                "todo Portugal!"
               ]}
               typingSpeed={75}
               pauseDuration={2000}
@@ -86,7 +86,7 @@ const Home = () => {
               cursorCharacter="|"
               cursorBlinkDuration={0.5}
               className="text-white"
-              highlightWords={["Vela!", "Algarve e", "Portugal"]}
+              highlightWords={["Vela!", "Algarve e...", "Portugal!"]}
               highlightClassName="text-primary"
             />
           </h1>
