@@ -19,6 +19,8 @@ interface TextTypeProps {
   onSentenceComplete?: (sentence: string, index: number) => void;
   startOnVisible?: boolean;
   reverseMode?: boolean;
+  highlightWords?: string[];
+  highlightClassName?: string;
 }
 
 const TextType = ({
@@ -39,6 +41,8 @@ const TextType = ({
   onSentenceComplete,
   startOnVisible = false,
   reverseMode = false,
+  highlightWords = [],
+  highlightClassName = '',
 }: TextTypeProps) => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
@@ -56,10 +60,36 @@ const TextType = ({
     return Math.random() * (max - min) + min;
   }, [variableSpeed, typingSpeed]);
 
-  const getCurrentTextColor = () => {
+  const getCurrentTextColor = useCallback(() => {
     if (textColors.length === 0) return;
     return textColors[currentTextIndex % textColors.length];
-  };
+  }, [textColors, currentTextIndex]);
+
+  const renderTextWithHighlights = useCallback((text: string) => {
+    if (highlightWords.length === 0) {
+      return <span style={{ color: getCurrentTextColor() || 'inherit' }}>{text}</span>;
+    }
+
+    const pattern = new RegExp(`(${highlightWords.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi');
+    const parts = text.split(pattern);
+
+    return (
+      <>
+        {parts.map((part, index) => {
+          const isHighlight = highlightWords.some(w => w.toLowerCase() === part.toLowerCase());
+          return (
+            <span
+              key={index}
+              className={isHighlight ? highlightClassName : ''}
+              style={{ color: !isHighlight ? (getCurrentTextColor() || 'inherit') : undefined }}
+            >
+              {part}
+            </span>
+          );
+        })}
+      </>
+    );
+  }, [highlightWords, highlightClassName, getCurrentTextColor]);
 
   useEffect(() => {
     if (!startOnVisible || !containerRef.current) return;
@@ -168,9 +198,7 @@ const TextType = ({
       ref={containerRef}
       className={`inline-block whitespace-pre-wrap ${className}`}
     >
-      <span style={{ color: getCurrentTextColor() || 'inherit' }}>
-        {displayedText}
-      </span>
+      {renderTextWithHighlights(displayedText)}
       {showCursor && (
         <span
           ref={cursorRef}
