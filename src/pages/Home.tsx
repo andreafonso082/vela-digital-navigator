@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Zap, Pen, ArrowRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -60,6 +61,16 @@ const Home = () => {
     website: "https://example.com"
   }];
   return <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Agência Vela | Marketing Digital e Web Design | Algarve e Tavira</title>
+        <meta name="description" content="Agência Vela - Especialistas em marketing digital, web design e criação de websites no Algarve. Sites desde 500€. Agência de marketing em Tavira com SEO, redes sociais e branding low-cost para pequenos negócios." />
+        <link rel="canonical" href="https://vela-digital-navigator.lovable.app/" />
+        <meta property="og:title" content="Agência Vela | Marketing Digital e Web Design | Algarve e Tavira" />
+        <meta property="og:description" content="Agência Vela - Especialistas em marketing digital e web design no Algarve. Sites desde 500€. Marketing Tavira." />
+        <meta property="og:url" content="https://vela-digital-navigator.lovable.app/" />
+        <meta property="og:type" content="website" />
+        <meta name="keywords" content="agência de marketing, agência vela, marketing digital, web design, criação de websites, SEO, google meu negócio, agência de marketing algarve, agência de marketing tavira, marketing tavira, gestão de redes sociais, branding, sites baratos" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}

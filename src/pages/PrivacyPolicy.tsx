@@ -1,9 +1,16 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Política de Privacidade | Agência Vela - Marketing Digital Algarve</title>
+        <meta name="description" content="Política de privacidade da Agência Vela. Saiba como protegemos os seus dados pessoais. Agência de marketing digital no Algarve e Tavira, Portugal." />
+        <link rel="canonical" href="https://vela-digital-navigator.lovable.app/privacy" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <Header />
       <main className="container mx-auto px-4 py-24">
         <div className="max-w-4xl mx-auto">

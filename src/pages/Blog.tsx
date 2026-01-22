@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Calendar, ArrowRight } from "lucide-react";
@@ -52,6 +53,15 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Blog de Marketing Digital | Dicas SEO e Web Design | Agência Vela</title>
+        <meta name="description" content="Blog da Agência Vela com dicas de marketing digital, SEO, web design e redes sociais para pequenos negócios. Estratégias de marketing Tavira e Algarve para crescimento do seu negócio." />
+        <link rel="canonical" href="https://vela-digital-navigator.lovable.app/blog" />
+        <meta property="og:title" content="Blog de Marketing Digital | Agência Vela" />
+        <meta property="og:description" content="Dicas de marketing digital, SEO e web design para pequenos negócios." />
+        <meta property="og:url" content="https://vela-digital-navigator.lovable.app/blog" />
+        <meta name="keywords" content="blog marketing digital, dicas SEO, web design, redes sociais, marketing tavira, crescimento de negócio, impulsão de negócio" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}
