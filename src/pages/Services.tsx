@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
@@ -100,6 +101,15 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Serviços de Marketing Digital | Web Design e SEO | Agência Vela Algarve</title>
+        <meta name="description" content="Serviços de marketing digital da Agência Vela: criação de websites desde 500€, SEO, Google Meu Negócio, gestão de redes sociais, branding e agentes IA. Marketing Tavira e Algarve com preços low-cost." />
+        <link rel="canonical" href="https://vela-digital-navigator.lovable.app/services" />
+        <meta property="og:title" content="Serviços de Marketing Digital | Web Design e SEO | Agência Vela" />
+        <meta property="og:description" content="Serviços de marketing digital: websites desde 500€, SEO, redes sociais e branding." />
+        <meta property="og:url" content="https://vela-digital-navigator.lovable.app/services" />
+        <meta name="keywords" content="criação de website, web design, SEO, google meu negócio, gestão de redes sociais, branding, criação de logo, agentes IA, sites baratos, marketing low-cost" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}

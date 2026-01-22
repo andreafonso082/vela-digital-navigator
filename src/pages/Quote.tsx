@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -94,6 +95,15 @@ const Quote = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Orçamento Gratuito | Marketing Digital e Web Design | Agência Vela</title>
+        <meta name="description" content="Peça orçamento gratuito à Agência Vela. Marketing digital, web design e SEO no Algarve e Tavira. Sites desde 500€. Resposta garantida em 24 horas, sem compromisso." />
+        <link rel="canonical" href="https://vela-digital-navigator.lovable.app/quote" />
+        <meta property="og:title" content="Orçamento Gratuito | Agência Vela" />
+        <meta property="og:description" content="Peça orçamento gratuito para marketing digital e web design. Resposta em 24h." />
+        <meta property="og:url" content="https://vela-digital-navigator.lovable.app/quote" />
+        <meta name="keywords" content="orçamento marketing, orçamento web design, orçamento gratuito, agência vela, marketing tavira, sites baratos, marketing low-cost" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}

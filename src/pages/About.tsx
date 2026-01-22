@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Target, Zap, Users, Heart } from "lucide-react";
@@ -49,6 +50,15 @@ const About = () => {
     description: "Aplicamos as nossas melhores estratégias e métodos validados e juntos, crescemos o seu negócio como nunca antes!"
   }];
   return <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Sobre a Agência Vela | Marketing Digital Tavira e Algarve | Portugal</title>
+        <meta name="description" content="Conheça a Agência Vela - agência de marketing digital no Algarve especializada em web design, SEO e branding para pequenos negócios. Marketing Tavira com preços acessíveis e profissionais dedicados." />
+        <link rel="canonical" href="https://vela-digital-navigator.lovable.app/about" />
+        <meta property="og:title" content="Sobre a Agência Vela | Marketing Digital Tavira e Algarve" />
+        <meta property="og:description" content="Conheça a Agência Vela - especialistas em marketing digital no Algarve e Tavira." />
+        <meta property="og:url" content="https://vela-digital-navigator.lovable.app/about" />
+        <meta name="keywords" content="agência vela, sobre nós, agência de marketing algarve, marketing tavira, especialista marketing, especialista digital, profissional web" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}

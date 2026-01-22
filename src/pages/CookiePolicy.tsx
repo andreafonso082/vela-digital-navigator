@@ -1,9 +1,16 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const CookiePolicy = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Política de Cookies | Agência Vela - Marketing Digital Algarve</title>
+        <meta name="description" content="Política de cookies da Agência Vela. Informações sobre como utilizamos cookies no nosso website. Agência de marketing digital Algarve e Tavira." />
+        <link rel="canonical" href="https://vela-digital-navigator.lovable.app/cookies" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <Header />
       <main className="container mx-auto px-4 py-24">
         <div className="max-w-4xl mx-auto">

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -63,6 +64,15 @@ const Contact = () => {
     });
   };
   return <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Contacte a Agência Vela | Marketing Digital Tavira | Algarve Portugal</title>
+        <meta name="description" content="Contacte a Agência Vela para marketing digital, web design e SEO no Algarve. Agência de marketing em Tavira. Resposta garantida em 24h. Orçamentos gratuitos sem compromisso." />
+        <link rel="canonical" href="https://vela-digital-navigator.lovable.app/contact" />
+        <meta property="og:title" content="Contacte a Agência Vela | Marketing Digital Tavira" />
+        <meta property="og:description" content="Contacte-nos para marketing digital e web design. Resposta em 24h." />
+        <meta property="og:url" content="https://vela-digital-navigator.lovable.app/contact" />
+        <meta name="keywords" content="contacto agência vela, marketing tavira, agência de marketing algarve, orçamento marketing, contacto web design" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}
