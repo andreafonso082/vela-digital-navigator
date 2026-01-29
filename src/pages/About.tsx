@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -5,6 +6,7 @@ import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import velaLogo from "@/assets/vela-logo.png";
 const About = () => {
+  const [revealedWords, setRevealedWords] = useState<number[]>([]);
   const storySection = useScrollAnimation();
   const missionSection = useScrollAnimation();
   const valuesSection = useScrollAnimation();
@@ -164,21 +166,39 @@ const About = () => {
               { letter: 'E', word: 'ficácia', description: 'Soluções que funcionam e geram resultados reais para o seu negócio.' },
               { letter: 'L', word: 'ucidez', description: 'Estratégias claras e transparentes, sem complicações desnecessárias.' },
               { letter: 'A', word: 'mbição', description: 'Objetivos ambiciosos para levar o seu negócio mais longe.' }
-            ].map((value, index) => (
-              <div 
-                key={index} 
-                className="flex items-center gap-4 md:gap-8 p-4 md:p-6 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300 group"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <h3 className="text-5xl md:text-7xl font-bold tracking-tight">
-                  <span className="text-primary">{value.letter}</span>
-                  <span className="text-foreground ml-2 md:ml-4">{value.word}</span>
-                </h3>
-                <p className="text-muted-foreground text-sm md:text-base flex-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">
-                  {value.description}
-                </p>
-              </div>
-            ))}
+            ].map((value, index) => {
+              const isRevealed = revealedWords.includes(index);
+              return (
+                <div 
+                  key={index} 
+                  className="flex items-center gap-4 md:gap-8 p-4 md:p-6 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300 group cursor-pointer"
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                  onMouseEnter={() => {
+                    if (!isRevealed) {
+                      setRevealedWords(prev => [...prev, index]);
+                    }
+                  }}
+                >
+                  <h3 className="text-5xl md:text-7xl font-bold tracking-tight">
+                    <span className="text-primary">{value.letter}</span>
+                    <span 
+                      className={`text-foreground ml-2 md:ml-4 transition-all duration-500 ${
+                        isRevealed 
+                          ? 'opacity-100 translate-x-0' 
+                          : 'opacity-0 -translate-x-4'
+                      }`}
+                    >
+                      {value.word}
+                    </span>
+                  </h3>
+                  <p className={`text-muted-foreground text-sm md:text-base flex-1 transition-opacity duration-300 hidden md:block ${
+                    isRevealed ? 'opacity-100' : 'opacity-0'
+                  }`}>
+                    {value.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
