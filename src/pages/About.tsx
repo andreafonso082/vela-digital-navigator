@@ -160,7 +160,7 @@ const About = () => {
             <p className="text-xl text-secondary-foreground/90">O que nos guia em cada projeto</p>
           </div>
 
-          <div className="max-w-4xl flex flex-col gap-4 md:gap-6">
+          <div className="w-full flex flex-col gap-4 md:gap-6">
             {[
               { letter: 'V', word: 'elocidade', description: 'Entregamos projetos em tempo recorde sem comprometer a qualidade.' },
               { letter: 'E', word: 'ficácia', description: 'Soluções que funcionam e geram resultados reais para o seu negócio.' },
