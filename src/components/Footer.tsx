@@ -59,8 +59,8 @@ const Footer = () => {
             <h3 className="font-bold mb-4">Contacto</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/80">
-                <Mail size={16} className="text-primary" />
-                <span>vela.web.team@gmail.com</span>
+              <Mail size={16} className="text-primary" />
+                <span>contacto@agencia-vela.com</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/80">
                 <Phone size={16} className="text-primary" />
