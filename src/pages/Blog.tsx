@@ -133,32 +133,6 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="py-20 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-4">
-              Subscreva a Nossa Newsletter
-            </h2>
-            <p className="text-xl text-secondary-foreground/90 mb-8">
-              Receba dicas exclusivas de marketing digital diretamente no seu email
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-              <input
-                type="email"
-                placeholder="O seu melhor email"
-                className="flex-1 px-6 py-3 rounded-lg bg-white text-secondary border-none focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <Button 
-                size="lg"
-                className="bg-primary hover:bg-primary-hover text-primary-foreground whitespace-nowrap"
-              >
-                Subscrever
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
