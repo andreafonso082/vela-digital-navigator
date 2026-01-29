@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Pen, ArrowRight, Quote } from "lucide-react";
-import F1CarAnimation from "@/components/F1CarAnimation";
+import { Zap, Pen, ArrowRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
@@ -33,7 +32,7 @@ const Home = () => {
     image: aiImage
   }];
   const pillars = [{
-    icon: "f1",
+    icon: Zap,
     title: "Entrega Rápida",
     description: "Projetos concluídos em tempo recorde sem comprometer a qualidade"
   }, {
@@ -173,13 +172,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pillars.map((pillar, index) => <div key={index} className="text-center p-8 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300">
                 <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary/10 mb-6">
-                  {pillar.icon === "f1" ? (
-                    <F1CarAnimation />
-                  ) : typeof pillar.icon === 'string' ? (
-                    <span className="text-primary text-3xl font-bold animate-pulse-strong">{pillar.icon}</span>
-                  ) : (
-                    <pillar.icon size={32} className="text-primary animate-draw" />
-                  )}
+                  {typeof pillar.icon === 'string' ? <span className="text-primary text-3xl font-bold animate-pulse-strong">{pillar.icon}</span> : index === 0 ? <pillar.icon size={32} className="text-primary animate-shake" /> : <pillar.icon size={32} className="text-primary animate-draw" />}
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">{pillar.title}</h3>
                 <p className="text-muted-foreground">{pillar.description}</p>
