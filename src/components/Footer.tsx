@@ -38,6 +38,16 @@ const Footer = () => {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link to="/contact" className="text-secondary-foreground/80 hover:text-primary transition-colors text-sm">
+                  Contactos
+                </Link>
+              </li>
+              <li>
+                <Link to="/quote" className="text-secondary-foreground/80 hover:text-primary transition-colors text-sm">
+                  Pedir Orçamento
+                </Link>
+              </li>
             </ul>
           </div>
 
