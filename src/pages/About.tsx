@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Target, Zap, Users, Heart } from "lucide-react";
+
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import velaLogo from "@/assets/vela-logo.png";
 const About = () => {
@@ -15,23 +15,6 @@ const About = () => {
   const processStep3 = useScrollAnimation();
   const processStep4 = useScrollAnimation();
   const stepAnimations = [processStep1, processStep2, processStep3, processStep4];
-  const values = [{
-    icon: Target,
-    title: "Transparência",
-    description: "Preços claros, sem surpresas. O que vê é o que paga."
-  }, {
-    icon: Zap,
-    title: "Rapidez",
-    description: "Entregamos projetos em tempo recorde sem comprometer a qualidade."
-  }, {
-    icon: Users,
-    title: "Simplicidade",
-    description: "Processos simples e diretos. Marketing sem complicações."
-  }, {
-    icon: Heart,
-    title: "Dedicação",
-    description: "Tratamos o seu negócio como se fosse nosso."
-  }];
   const processSteps = [{
     step: "Passo 1",
     title: "Primeiro Contacto",
@@ -167,7 +150,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Values Section - VELA Vertical */}
       <section ref={valuesSection.elementRef} className="py-20 bg-secondary text-secondary-foreground">
         <div className={`container mx-auto px-4 transition-all duration-700 ${valuesSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="text-center mb-12">
@@ -175,14 +158,27 @@ const About = () => {
             <p className="text-xl text-secondary-foreground/90">O que nos guia em cada projeto</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {values.map((value, index) => <div key={index} className="text-center p-6 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-                  <value.icon size={32} className="text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">{value.title}</h3>
-                <p className="text-muted-foreground text-sm">{value.description}</p>
-              </div>)}
+          <div className="max-w-4xl mx-auto flex flex-col gap-4 md:gap-6">
+            {[
+              { letter: 'V', word: 'elocidade', description: 'Entregamos projetos em tempo recorde sem comprometer a qualidade.' },
+              { letter: 'E', word: 'ficácia', description: 'Soluções que funcionam e geram resultados reais para o seu negócio.' },
+              { letter: 'L', word: 'ucidez', description: 'Estratégias claras e transparentes, sem complicações desnecessárias.' },
+              { letter: 'A', word: 'mbição', description: 'Objetivos ambiciosos para levar o seu negócio mais longe.' }
+            ].map((value, index) => (
+              <div 
+                key={index} 
+                className="flex items-center gap-4 md:gap-8 p-4 md:p-6 rounded-lg bg-card shadow-elegant hover:shadow-strong transition-all duration-300 group"
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <h3 className="text-5xl md:text-7xl font-bold tracking-tight">
+                  <span className="text-primary">{value.letter}</span>
+                  <span className="text-foreground">{value.word}</span>
+                </h3>
+                <p className="text-muted-foreground text-sm md:text-base flex-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">
+                  {value.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
