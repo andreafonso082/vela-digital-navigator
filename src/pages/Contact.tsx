@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Clock, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Loader2, MessageCircle, Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 const Contact = () => {
   const {
@@ -182,6 +182,30 @@ const Contact = () => {
                       <h3 className="font-bold text-foreground mb-1">Horário</h3>
                       <p className="text-muted-foreground py-0">Domingo a Sexta: 9h - 20h </p>
                       <p className="text-muted-foreground">Sábado: 9h-12h</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <MessageCircle className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">WhatsApp</h3>
+                      <a href="https://wa.me/351968334043" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        968 334 043
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Instagram className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">Instagram</h3>
+                      <a href="https://www.instagram.com/agencia_vela/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        @agencia_vela
+                      </a>
                     </div>
                   </div>
                 </div>
