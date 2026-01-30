@@ -71,7 +71,7 @@ const Contact = () => {
         <meta property="og:title" content="Contacte a Agência Vela | Marketing Digital Tavira" />
         <meta property="og:description" content="Contacte-nos para marketing digital e web design. Resposta em 24h." />
         <meta property="og:url" content="https://vela-digital-navigator.lovable.app/contact" />
-        <meta name="keywords" content="contacto agência vela, marketing tavira, agência de marketing algarve, orçamento marketing, contacto web design" />
+        <meta name="keywords" content="agência de marketing, agência de marketing algarve, marketing algarve, agência criativa, telemarketing, marketing, agência de marketing tavira, marketing tavira, empresa que faz sites, empresa de sites, sites baratos, contacto agência vela, orçamento marketing, contacto web design" />
       </Helmet>
       <Header />
       

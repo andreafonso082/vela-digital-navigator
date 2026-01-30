@@ -10,6 +10,7 @@ const PrivacyPolicy = () => {
         <meta name="description" content="Política de privacidade da Agência Vela. Saiba como protegemos os seus dados pessoais. Agência de marketing digital no Algarve e Tavira, Portugal." />
         <link rel="canonical" href="https://vela-digital-navigator.lovable.app/privacy" />
         <meta name="robots" content="noindex, follow" />
+        <meta name="keywords" content="agência de marketing, agência de marketing algarve, marketing algarve, agência criativa, telemarketing, marketing, agência de marketing tavira, marketing tavira, empresa que faz sites, empresa de sites, sites baratos" />
       </Helmet>
       <Header />
       <main className="container mx-auto px-4 py-24">
