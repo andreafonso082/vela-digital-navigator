@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
 import velaLogo from "@/assets/vela-logo.png";
 const Footer = () => {
   return <footer className="bg-secondary text-secondary-foreground">
@@ -83,6 +83,12 @@ const Footer = () => {
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/80">
                 <MapPin size={16} className="text-primary" />
                 <span>Algarve, Portugal</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm text-secondary-foreground/80">
+                <MessageCircle size={16} className="text-primary" />
+                <a href="https://wa.me/351968334043" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  WhatsApp
+                </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/80">
                 <Instagram size={16} className="text-primary" />
