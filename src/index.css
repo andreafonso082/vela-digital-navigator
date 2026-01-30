@@ -102,6 +102,13 @@ All colors MUST be HSL.
   html, body {
     @apply overflow-x-hidden;
     max-width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
   }
 
   body {
