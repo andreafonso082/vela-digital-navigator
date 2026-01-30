@@ -69,12 +69,16 @@ const Footer = () => {
             <h3 className="font-bold mb-4">Contacto</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/80">
-              <Mail size={16} className="text-primary" />
-                <span>contacto@agencia-vela.com</span>
+                <Mail size={16} className="text-primary" />
+                <a href="mailto:contacto@agencia-vela.com" className="hover:text-primary transition-colors">
+                  contacto@agencia-vela.com
+                </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/80">
                 <Phone size={16} className="text-primary" />
-                <span>968 334 043</span>
+                <a href="tel:+351968334043" className="hover:text-primary transition-colors">
+                  968 334 043
+                </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-secondary-foreground/80">
                 <MapPin size={16} className="text-primary" />
