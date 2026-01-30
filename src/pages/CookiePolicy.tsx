@@ -10,6 +10,7 @@ const CookiePolicy = () => {
         <meta name="description" content="Política de cookies da Agência Vela. Informações sobre como utilizamos cookies no nosso website. Agência de marketing digital Algarve e Tavira." />
         <link rel="canonical" href="https://vela-digital-navigator.lovable.app/cookies" />
         <meta name="robots" content="noindex, follow" />
+        <meta name="keywords" content="agência de marketing, agência de marketing algarve, marketing algarve, agência criativa, telemarketing, marketing, agência de marketing tavira, marketing tavira, empresa que faz sites, empresa de sites, sites baratos" />
       </Helmet>
       <Header />
       <main className="container mx-auto px-4 py-24">

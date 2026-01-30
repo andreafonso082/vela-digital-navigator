@@ -108,7 +108,7 @@ const Services = () => {
         <meta property="og:title" content="Serviços de Marketing Digital | Web Design e SEO | Agência Vela" />
         <meta property="og:description" content="Serviços de marketing digital: websites desde 500€, SEO, redes sociais e branding." />
         <meta property="og:url" content="https://vela-digital-navigator.lovable.app/services" />
-        <meta name="keywords" content="criação de website, web design, SEO, google meu negócio, gestão de redes sociais, branding, criação de logo, agentes IA, sites baratos, marketing low-cost" />
+        <meta name="keywords" content="agência de marketing, agência de marketing algarve, marketing algarve, agência criativa, telemarketing, marketing, agência de marketing tavira, marketing tavira, empresa que faz sites, empresa de sites, sites baratos, criação de website, web design, SEO, google meu negócio, gestão de redes sociais, branding, criação de logo, agentes IA, marketing low-cost" />
       </Helmet>
       <Header />
       
