@@ -29,11 +29,12 @@ const Blog = () => {
       slug: "redes-sociais-guia",
     },
     {
-      title: "SEO Para Arquitetos: Como Destacar o Seu Portfolio Online",
-      excerpt: "Dicas específicas de SEO para arquitetos mostrarem o seu trabalho e atraírem mais clientes através de pesquisas.",
-      date: "20 Novembro 2025",
+      title: "5 Dicas para Subir no Ranking Google My Business",
+      excerpt: "Aprenda 5 estratégias práticas para melhorar o posicionamento do seu negócio no Google My Business e atrair mais clientes.",
+      date: "10 Dezembro 2025",
       category: "SEO",
-      slug: "seo-arquitetos",
+      slug: "google-my-business-ranking",
+      externalLink: "https://www.instagram.com/p/DSFydvVjMfH/?img_index=1",
     },
     {
       title: "Fotografia Profissional: Vale a Pena o Investimento?",
@@ -108,13 +109,25 @@ const Blog = () => {
                     {post.excerpt}
                   </p>
 
-                  <Button 
-                    variant="ghost" 
-                    className="group-hover:text-primary p-0 h-auto font-semibold"
-                  >
-                    Ler mais
-                    <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  {post.externalLink ? (
+                    <a 
+                      href={post.externalLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center font-semibold text-foreground hover:text-primary transition-colors"
+                    >
+                      Ver no Instagram
+                      <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  ) : (
+                    <Button 
+                      variant="ghost" 
+                      className="group-hover:text-primary p-0 h-auto font-semibold"
+                    >
+                      Ler mais
+                      <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  )}
                 </div>
               </article>
             ))}
