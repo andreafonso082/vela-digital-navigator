@@ -86,11 +86,11 @@ const Blog = () => {
             {blogPosts.map((post, index) => (
               <article 
                 key={index}
-                className="bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-strong transition-all duration-300 group"
+                className="bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-strong transition-all duration-300 group flex flex-col"
               >
                 <div className="h-48 bg-gradient-hero" />
                 
-                <div className="p-6 space-y-4">
+                <div className="p-6 space-y-4 flex flex-col flex-1">
                   <div className="flex items-center gap-3 text-sm">
                     <span className="px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">
                       {post.category}
@@ -105,10 +105,11 @@ const Blog = () => {
                     {post.title}
                   </h2>
 
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground flex-1">
                     {post.excerpt}
                   </p>
 
+                  <div className="mt-auto pt-2">
                   {post.externalLink ? (
                     <a 
                       href={post.externalLink} 
@@ -128,6 +129,7 @@ const Blog = () => {
                       <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   )}
+                  </div>
                 </div>
               </article>
             ))}
