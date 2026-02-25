@@ -39,7 +39,7 @@ const Blog = () => {
       slug: "google-my-business-ranking",
       externalLink: "https://www.instagram.com/p/DSFydvVjMfH/?img_index=1",
       image: blogGoogleRanking,
-      imagePosition: "object-[65%]",
+      imagePosition: "object-bottom",
     },
     {
       title: "3 Razões Pelas Quais o Teu Negócio Deve Ter um Site",
@@ -59,7 +59,7 @@ const Blog = () => {
       slug: "o-que-fazemos-15-segundos",
       externalLink: "https://www.instagram.com/p/DR2qxLHDh2k/?img_index=1",
       image: blog15segundos,
-      imagePosition: "object-[30%]",
+      imagePosition: "object-top",
     },
   ];
 
