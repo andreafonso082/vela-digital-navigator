@@ -39,6 +39,7 @@ const Blog = () => {
       slug: "google-my-business-ranking",
       externalLink: "https://www.instagram.com/p/DSFydvVjMfH/?img_index=1",
       image: blogGoogleRanking,
+      imagePosition: "object-bottom",
     },
     {
       title: "3 Razões Pelas Quais o Teu Negócio Deve Ter um Site",
@@ -48,6 +49,7 @@ const Blog = () => {
       slug: "razoes-negocio-ter-site",
       externalLink: "https://www.instagram.com/p/DSF2i0-jgoL/?img_index=1",
       image: blogWebsite,
+      imagePosition: "object-top",
     },
     {
       title: "O Que Fazemos em 15 Segundos",
@@ -57,6 +59,7 @@ const Blog = () => {
       slug: "o-que-fazemos-15-segundos",
       externalLink: "https://www.instagram.com/p/DR2qxLHDh2k/?img_index=1",
       image: blog15segundos,
+      imagePosition: "object-top",
     },
   ];
 
@@ -97,7 +100,7 @@ const Blog = () => {
                 className="bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-strong transition-all duration-300 group flex flex-col"
               >
                 {post.image ? (
-                  <img src={post.image} alt={post.title} className="h-48 w-full object-cover" />
+                  <img src={post.image} alt={post.title} className={`h-48 w-full object-cover ${post.imagePosition || ''}`} />
                 ) : (
                   <div className="h-48 bg-gradient-hero" />
                 )}
