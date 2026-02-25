@@ -24,7 +24,7 @@ const Home = () => {
     image: websiteImage
   }, {
     title: "Gestão de Redes Sociais",
-    description: "Presença consistente por apenas 150€/mês",
+    description: "Presença consistente por apenas 120€/mês",
     image: socialImage
   }, {
     title: "Integração de Agentes IA",
