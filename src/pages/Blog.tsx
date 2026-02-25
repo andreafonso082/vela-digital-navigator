@@ -4,6 +4,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import blogWebsite from "@/assets/blog-website.png";
+import blog15segundos from "@/assets/blog-15segundos.png";
+import blogGoogleRanking from "@/assets/blog-google-ranking.png";
 
 const Blog = () => {
   const blogPosts = [
@@ -35,6 +38,7 @@ const Blog = () => {
       category: "SEO",
       slug: "google-my-business-ranking",
       externalLink: "https://www.instagram.com/p/DSFydvVjMfH/?img_index=1",
+      image: blogGoogleRanking,
     },
     {
       title: "3 Razões Pelas Quais o Teu Negócio Deve Ter um Site",
@@ -43,6 +47,7 @@ const Blog = () => {
       category: "Web Design",
       slug: "razoes-negocio-ter-site",
       externalLink: "https://www.instagram.com/p/DSF2i0-jgoL/?img_index=1",
+      image: blogWebsite,
     },
     {
       title: "O Que Fazemos em 15 Segundos",
@@ -51,6 +56,7 @@ const Blog = () => {
       category: "Marketing Digital",
       slug: "o-que-fazemos-15-segundos",
       externalLink: "https://www.instagram.com/p/DR2qxLHDh2k/?img_index=1",
+      image: blog15segundos,
     },
   ];
 
@@ -90,7 +96,11 @@ const Blog = () => {
                 key={index}
                 className="bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-strong transition-all duration-300 group flex flex-col"
               >
-                <div className="h-48 bg-gradient-hero" />
+                {post.image ? (
+                  <img src={post.image} alt={post.title} className="h-48 w-full object-cover" />
+                ) : (
+                  <div className="h-48 bg-gradient-hero" />
+                )}
                 
                 <div className="p-6 space-y-4 flex flex-col flex-1">
                   <div className="flex items-center gap-3 text-sm">
