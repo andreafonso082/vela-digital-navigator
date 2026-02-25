@@ -45,11 +45,12 @@ const Blog = () => {
       externalLink: "https://www.instagram.com/p/DSF2i0-jgoL/?img_index=1",
     },
     {
-      title: "Marketing Low-Cost: Estratégias Que Funcionam",
-      excerpt: "Estratégias de marketing eficazes que não vão esvaziar o orçamento do seu pequeno negócio.",
-      date: "15 Outubro 2025",
+      title: "O Que Fazemos em 15 Segundos",
+      excerpt: "Descubra como a Agência Vela pode transformar o seu negócio em apenas 15 segundos.",
+      date: "4 Dezembro 2025",
       category: "Marketing Digital",
-      slug: "marketing-low-cost",
+      slug: "o-que-fazemos-15-segundos",
+      externalLink: "https://www.instagram.com/p/DR2qxLHDh2k/?img_index=1",
     },
   ];
 
