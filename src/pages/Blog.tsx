@@ -116,7 +116,7 @@ const Blog = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center font-semibold text-foreground hover:text-primary transition-colors"
                     >
-                      Ver no Instagram
+                      Ler mais
                       <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                     </a>
                   ) : (
