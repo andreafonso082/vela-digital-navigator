@@ -37,11 +37,12 @@ const Blog = () => {
       externalLink: "https://www.instagram.com/p/DSFydvVjMfH/?img_index=1",
     },
     {
-      title: "Fotografia Profissional: Vale a Pena o Investimento?",
-      excerpt: "Descubra como fotografias profissionais podem transformar a perceção da sua marca e aumentar conversões.",
-      date: "5 Novembro 2025",
-      category: "Branding",
-      slug: "fotografia-profissional",
+      title: "3 Razões Pelas Quais o Teu Negócio Deve Ter um Site",
+      excerpt: "Descubra porque ter um site profissional é fundamental para o crescimento e credibilidade do teu negócio.",
+      date: "10 Dezembro 2025",
+      category: "Web Design",
+      slug: "razoes-negocio-ter-site",
+      externalLink: "https://www.instagram.com/p/DSF2i0-jgoL/?img_index=1",
     },
     {
       title: "Marketing Low-Cost: Estratégias Que Funcionam",
