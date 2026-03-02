@@ -17,7 +17,7 @@ const Services = () => {
   const services = [
     {
       title: "Criação de Websites e Web Design",
-      price: "Desde 500€",
+      price: "Desde 700€",
       description: "Sites baratos e profissionais, modernos e responsivos, otimizados para conversão. Web design personalizado com SEO básico incluído e formação de gestão.",
       image: websiteImage,
       features: [
@@ -103,10 +103,10 @@ const Services = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Serviços de Marketing Digital | Web Design e SEO | Agência Vela Algarve</title>
-        <meta name="description" content="Serviços de marketing digital da Agência Vela: criação de websites desde 500€, SEO, Google Meu Negócio, gestão de redes sociais, branding e agentes IA. Marketing Tavira e Algarve com preços low-cost." />
+        <meta name="description" content="Serviços de marketing digital da Agência Vela: criação de websites desde 700€, SEO, Google Meu Negócio, gestão de redes sociais, branding e agentes IA. Marketing Tavira e Algarve com preços low-cost." />
         <link rel="canonical" href="https://vela-digital-navigator.lovable.app/services" />
         <meta property="og:title" content="Serviços de Marketing Digital | Web Design e SEO | Agência Vela" />
-        <meta property="og:description" content="Serviços de marketing digital: websites desde 500€, SEO, redes sociais e branding." />
+        <meta property="og:description" content="Serviços de marketing digital: websites desde 700€, SEO, redes sociais e branding." />
         <meta property="og:url" content="https://vela-digital-navigator.lovable.app/services" />
         <meta name="keywords" content="agência de marketing, agência de marketing algarve, marketing algarve, agência criativa, telemarketing, marketing, agência de marketing tavira, marketing tavira, empresa que faz sites, empresa de sites, sites baratos, criação de website, web design, SEO, google meu negócio, gestão de redes sociais, branding, criação de logo, agentes IA, marketing low-cost" />
       </Helmet>

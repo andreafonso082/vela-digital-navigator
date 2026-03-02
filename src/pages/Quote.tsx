@@ -22,7 +22,7 @@ const Quote = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const services = [
-    "Criação de Website (Desde 500€)",
+    "Criação de Website (Desde 700€)",
     "SEO e Google Meu Negócio (100€ ou 70€/mês)",
     "Gestão de Redes Sociais (Desde 120€/mês)",
     "Branding e Logotipo (70€)",
@@ -97,7 +97,7 @@ const Quote = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Orçamento Gratuito | Marketing Digital e Web Design | Agência Vela</title>
-        <meta name="description" content="Peça orçamento gratuito à Agência Vela. Marketing digital, web design e SEO no Algarve e Tavira. Sites desde 500€. Resposta garantida em 24 horas, sem compromisso." />
+        <meta name="description" content="Peça orçamento gratuito à Agência Vela. Marketing digital, web design e SEO no Algarve e Tavira. Sites desde 700€. Resposta garantida em 24 horas, sem compromisso." />
         <link rel="canonical" href="https://vela-digital-navigator.lovable.app/quote" />
         <meta property="og:title" content="Orçamento Gratuito | Agência Vela" />
         <meta property="og:description" content="Peça orçamento gratuito para marketing digital e web design. Resposta em 24h." />
