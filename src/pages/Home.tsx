@@ -20,7 +20,7 @@ const Home = () => {
   const ctaSection = useScrollAnimation();
   const services = [{
     title: "Websites Profissionais e Sites Baratos",
-    description: "Criação de websites modernos desde 500€",
+    description: "Criação de websites modernos desde 700€",
     image: websiteImage
   }, {
     title: "Gestão de Redes Sociais",
@@ -63,10 +63,10 @@ const Home = () => {
   return <div className="min-h-screen bg-background">
       <Helmet>
         <title>Agência Vela | Marketing Digital e Web Design | Algarve e Tavira</title>
-        <meta name="description" content="Agência Vela - Especialistas em marketing digital, web design e criação de websites no Algarve. Sites desde 500€. Agência de marketing em Tavira com SEO, redes sociais e branding low-cost para pequenos negócios." />
+        <meta name="description" content="Agência Vela - Especialistas em marketing digital, web design e criação de websites no Algarve. Sites desde 700€. Agência de marketing em Tavira com SEO, redes sociais e branding low-cost para pequenos negócios." />
         <link rel="canonical" href="https://vela-digital-navigator.lovable.app/" />
         <meta property="og:title" content="Agência Vela | Marketing Digital e Web Design | Algarve e Tavira" />
-        <meta property="og:description" content="Agência Vela - Especialistas em marketing digital e web design no Algarve. Sites desde 500€. Marketing Tavira." />
+        <meta property="og:description" content="Agência Vela - Especialistas em marketing digital e web design no Algarve. Sites desde 700€. Marketing Tavira." />
         <meta property="og:url" content="https://vela-digital-navigator.lovable.app/" />
         <meta property="og:type" content="website" />
         <meta name="keywords" content="agência de marketing, agência de marketing algarve, marketing algarve, agência criativa, telemarketing, marketing, agência de marketing tavira, marketing tavira, empresa que faz sites, empresa de sites, sites baratos, agência vela, marketing digital, web design, criação de websites, SEO, google meu negócio, gestão de redes sociais, branding" />
@@ -109,7 +109,7 @@ const Home = () => {
               />
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">Especialistas em criação de websites, web design, SEO, Google Meu Negócio e gestão de redes sociais. Sites desde <span className="text-primary font-semibold">500€</span>. Marketing low-cost profissional para pequenos negócios.</p>
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">Especialistas em criação de websites, web design, SEO, Google Meu Negócio e gestão de redes sociais. Sites desde <span className="text-primary font-semibold">700€</span>. Marketing low-cost profissional para pequenos negócios.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/quote">
               <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground text-lg px-8 py-6">
