@@ -33,7 +33,7 @@ const Blog = () => {
       slug: "fotografia-profissional-vale-a-pena",
       externalLink: "https://www.instagram.com/p/DVROabZjBwu/",
       image: blogFotografia,
-      imagePosition: "object-[15%]",
+      imagePosition: "object-top",
     },
     {
       title: "5 Dicas para Subir no Ranking Google My Business",
