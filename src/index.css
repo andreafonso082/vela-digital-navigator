@@ -8,53 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Core Brand Colors - Vela Agency (Premium Dark Theme) */
-    --background: 220 15% 5%;
-    --foreground: 220 10% 92%;
+    /* Core Brand Colors - Vela Agency (Premium Dark Tech Theme) */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 93%;
     
-    /* Primary - Deep Crimson Red */
-    --primary: 0 75% 48%;
+    /* Primary - Bold Red */
+    --primary: 0 80% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 0 75% 38%;
+    --primary-hover: 0 80% 40%;
     
-    /* Secondary - Rich Charcoal */
-    --secondary: 220 20% 3%;
-    --secondary-foreground: 220 10% 90%;
-    --secondary-hover: 220 15% 12%;
+    /* Secondary - Deep Black */
+    --secondary: 0 0% 2%;
+    --secondary-foreground: 0 0% 93%;
+    --secondary-hover: 0 0% 10%;
     
-    /* Accent - Deep Slate */
-    --accent: 220 15% 10%;
-    --accent-foreground: 220 10% 92%;
+    /* Accent - Dark Carbon */
+    --accent: 0 0% 8%;
+    --accent-foreground: 0 0% 93%;
     
-    /* Muted - Textured Dark */
-    --muted: 220 12% 8%;
-    --muted-foreground: 220 8% 55%;
+    /* Muted - Stealth Gray */
+    --muted: 0 0% 6%;
+    --muted-foreground: 0 0% 50%;
     
     /* Card - Elevated Surface */
-    --card: 220 15% 7%;
-    --card-foreground: 220 10% 92%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 93%;
     
     /* Popover */
-    --popover: 220 15% 7%;
-    --popover-foreground: 220 10% 92%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 93%;
     
     /* Destructive */
-    --destructive: 0 75% 48%;
+    --destructive: 0 80% 50%;
     --destructive-foreground: 0 0% 100%;
     
     /* Border & Input */
-    --border: 220 10% 14%;
-    --input: 220 10% 14%;
-    --ring: 0 75% 48%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 0 80% 50%;
     
     --radius: 0.75rem;
     
     /* Custom Design Tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(0 75% 48%), hsl(0 75% 32%));
-    --gradient-subtle: linear-gradient(180deg, hsl(220 15% 5%), hsl(220 15% 8%));
-    --gradient-depth: linear-gradient(180deg, hsl(220 15% 3%) 0%, hsl(220 15% 6%) 50%, hsl(220 15% 4%) 100%);
-    --shadow-elegant: 0 10px 40px -10px hsl(0 0% 0% / 0.5);
-    --shadow-strong: 0 20px 60px -15px hsl(0 0% 0% / 0.7);
+    --gradient-hero: linear-gradient(135deg, hsl(0 80% 50%), hsl(0 80% 35%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 7%));
+    --shadow-elegant: 0 10px 40px -10px hsl(0 0% 0% / 0.6);
+    --shadow-strong: 0 20px 60px -15px hsl(0 0% 0% / 0.8);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
