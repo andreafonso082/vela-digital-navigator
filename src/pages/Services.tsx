@@ -5,7 +5,7 @@ import ServiceCard from "@/components/ServiceCard";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import websiteImage from "@/assets/service-website.jpg";
 import socialImage from "@/assets/service-social.jpg";
-import photoImage from "@/assets/service-photo.jpg";
+import googleAdsImage from "@/assets/service-google-ads.jpg";
 import seoImage from "@/assets/service-seo.jpg";
 import brandingImage from "@/assets/service-branding.jpg";
 import aiImage from "@/assets/service-ai.jpg";
