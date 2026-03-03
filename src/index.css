@@ -112,10 +112,10 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-space-grotesk;
+    @apply bg-background text-foreground font-inter;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-rajdhani font-bold uppercase tracking-wide;
+    @apply font-times;
   }
 }
