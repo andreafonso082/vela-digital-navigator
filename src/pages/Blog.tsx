@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import blogWebsite from "@/assets/blog-website.png";
 import blog15segundos from "@/assets/blog-15segundos.png";
 import blogGoogleRanking from "@/assets/blog-google-ranking.png";
+import blogFotografia from "@/assets/blog-fotografia.png";
 
 const Blog = () => {
   const blogPosts = [
