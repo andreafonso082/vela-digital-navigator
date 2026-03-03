@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'times': ['"Times New Roman"', 'Times', 'serif'],
-        'inter': ['Inter', 'sans-serif'],
+        'anton': ['Anton', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
