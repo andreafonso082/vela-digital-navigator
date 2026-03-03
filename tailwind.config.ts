@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
+        rajdhani: ['Rajdhani', 'sans-serif'],
+        'space-grotesk': ['Space Grotesk', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
