@@ -74,7 +74,7 @@ const Services = () => {
       title: "Criação e Gestão de Campanhas Google Ads",
       price: "Variável",
       description: "Campanhas de publicidade Google otimizadas para maximizar o retorno do seu investimento com base em resultados reais.",
-      image: photoImage,
+      image: googleAdsImage,
       features: [
         "Setup inicial de campanha com estudo de palavras-chave",
         "Gestão mensal de campanha",
