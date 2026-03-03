@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        'anton': ['Anton', 'sans-serif'],
+        'oswald': ['Oswald', 'sans-serif'],
         'montserrat': ['Montserrat', 'sans-serif'],
       },
       colors: {
