@@ -5,7 +5,7 @@ import ServiceCard from "@/components/ServiceCard";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import websiteImage from "@/assets/service-website.jpg";
 import socialImage from "@/assets/service-social.jpg";
-import photoImage from "@/assets/service-photo.jpg";
+import googleAdsImage from "@/assets/service-google-ads.jpg";
 import seoImage from "@/assets/service-seo.jpg";
 import brandingImage from "@/assets/service-branding.jpg";
 import aiImage from "@/assets/service-ai.jpg";
@@ -74,7 +74,7 @@ const Services = () => {
       title: "Criação e Gestão de Campanhas Google Ads",
       price: "Variável",
       description: "Campanhas de publicidade Google otimizadas para maximizar o retorno do seu investimento com base em resultados reais.",
-      image: photoImage,
+      image: googleAdsImage,
       features: [
         "Setup inicial de campanha com estudo de palavras-chave",
         "Gestão mensal de campanha",
