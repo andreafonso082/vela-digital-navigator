@@ -71,17 +71,15 @@ const Services = () => {
       ],
     },
     {
-      title: "Fotografia e Vídeo Profissional",
+      title: "Criação e Gestão de Campanhas Google Ads",
       price: "Variável",
-      description: "Sessões fotográficas e vídeos profissionais para mostrar o seu trabalho, espaço ou produtos com qualidade.",
+      description: "Campanhas de publicidade Google otimizadas para maximizar o retorno do seu investimento com base em resultados reais.",
       image: photoImage,
       features: [
-        "Sessão fotográfica até 2 horas",
-        "Fotografias editadas em alta resolução",
-        "Vídeos profissionais",
-        "Edição e pós-produção completa",
-        "Música e legendas incluídas",
-        "Direitos de utilização ilimitados",
+        "Setup inicial de campanha com estudo de palavras-chave",
+        "Gestão mensal de campanha",
+        "Relatórios de desempenho",
+        "Cobrança ao desempenho",
       ],
     },
     {

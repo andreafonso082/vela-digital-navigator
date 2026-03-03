@@ -59,7 +59,7 @@ const Footer = () => {
               <li>SEO & Google Meu Negócio</li>
               <li>Gestão de Redes Sociais</li>
               <li>Branding e Logotipos</li>
-              <li>Fotografia e Vídeo</li>
+              <li>Campanhas Google Ads</li>
               <li>Integração de Agente IA</li>
             </ul>
           </div>

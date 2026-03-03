@@ -26,7 +26,7 @@ const Quote = () => {
     "SEO e Google Meu Negócio (100€ ou 70€/mês)",
     "Gestão de Redes Sociais (Desde 120€/mês)",
     "Branding e Logotipo (70€)",
-    "Fotografia e Vídeo Profissional (variável)",
+    "Criação e Gestão de Campanhas Google Ads (variável)",
     "Integração de Agentes IA (Desde 1000€)",
   ];
 
