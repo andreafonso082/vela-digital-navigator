@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import blogWebsite from "@/assets/blog-website.png";
 import blog15segundos from "@/assets/blog-15segundos.png";
 import blogGoogleRanking from "@/assets/blog-google-ranking.png";
+import blogFotografia from "@/assets/blog-fotografia.png";
 
 const Blog = () => {
   const blogPosts = [
@@ -25,11 +26,14 @@ const Blog = () => {
       slug: "google-meu-negocio",
     },
     {
-      title: "Redes Sociais Para Pequenos Negócios: Um Guia Prático",
-      excerpt: "Estratégias simples e eficazes para pequenos negócios terem presença consistente nas redes sociais.",
-      date: "5 Dezembro 2025",
-      category: "Redes Sociais",
-      slug: "redes-sociais-guia",
+      title: "Fotografia Profissional Vale a Pena?",
+      excerpt: "Descubra porque investir em fotografia profissional pode fazer toda a diferença na imagem do seu negócio.",
+      date: "5 Março 2026",
+      category: "Fotografia",
+      slug: "fotografia-profissional-vale-a-pena",
+      externalLink: "https://www.instagram.com/p/DVROabZjBwu/",
+      image: blogFotografia,
+      imagePosition: "object-center",
     },
     {
       title: "5 Dicas para Subir no Ranking Google My Business",
