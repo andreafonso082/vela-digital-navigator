@@ -5,12 +5,11 @@ import { Button } from "@/components/ui/button";
 interface ServiceCardProps {
   title: string;
   description: string;
-  price: string;
   image: string;
   features?: string[];
 }
 
-const ServiceCard = ({ title, description, price, image, features }: ServiceCardProps) => {
+const ServiceCard = ({ title, description, image, features }: ServiceCardProps) => {
   return (
     <div className="bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-strong transition-all duration-300 group h-full flex flex-col">
       <div className="relative h-48 overflow-hidden flex-shrink-0">
@@ -19,9 +18,6 @@ const ServiceCard = ({ title, description, price, image, features }: ServiceCard
           alt={title} 
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
-        <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full font-bold">
-          {price}
-        </div>
       </div>
       
       <div className="p-6 flex flex-col flex-grow">

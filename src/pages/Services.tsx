@@ -86,7 +86,7 @@ const Services = () => {
     },
     {
       title: "Integração de Agentes IA",
-      price: "Desde 1000€",
+      
       description: "Agentes de inteligência artificial para automatizar a comunicação e processos do seu negócio através de chat, WhatsApp, chamadas e mais.",
       image: aiImage,
       features: [

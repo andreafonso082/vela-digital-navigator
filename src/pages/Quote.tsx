@@ -22,12 +22,12 @@ const Quote = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const services = [
-    "Criação de Website (Desde 700€)",
-    "SEO e Google Meu Negócio (100€ ou 70€/mês)",
-    "Gestão de Redes Sociais (Desde 120€/mês)",
-    "Branding e Logotipo (70€)",
-    "Criação e Gestão de Campanhas Google Ads (variável)",
-    "Integração de Agentes IA (Desde 1000€)",
+    "Criação de Website",
+    "SEO e Google Meu Negócio",
+    "Gestão de Redes Sociais",
+    "Branding e Logotipo",
+    "Criação e Gestão de Campanhas Google Ads",
+    "Integração de Agentes IA",
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
