@@ -43,15 +43,15 @@ const Home = () => {
   }];
   const services = [{
     title: "Websites Profissionais e Sites Baratos",
-    description: "Criação de websites modernos desde 700€",
+    description: "Criação de websites modernos e responsivos",
     image: websiteImage
   }, {
     title: "Gestão de Redes Sociais",
-    description: "Presença consistente por apenas 120€/mês",
+    description: "Presença consistente e profissional nas redes",
     image: socialImage
   }, {
     title: "Integração de Agentes IA",
-    description: "Automatize o seu negócio desde 1000€",
+    description: "Automatize a comunicação do seu negócio",
     image: aiImage
   }];
   const pillars = [{

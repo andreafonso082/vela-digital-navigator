@@ -19,7 +19,7 @@ const Services = () => {
   const services = [
     {
       title: "Criação de Websites e Web Design",
-      price: "Desde 700€",
+      
       description: "Sites baratos e profissionais, modernos e responsivos, otimizados para conversão. Web design personalizado com SEO básico incluído e formação de gestão.",
       image: websiteImage,
       features: [
@@ -32,7 +32,7 @@ const Services = () => {
     },
     {
       title: "SEO e Google Meu Negócio",
-      price: "100€ ou 70€/mês",
+      
       description: "Otimização contínua para motores de busca e gestão do perfil Google Meu Negócio para máxima visibilidade local.",
       image: seoImage,
       features: [
@@ -46,7 +46,7 @@ const Services = () => {
     },
     {
       title: "Gestão de Redes Sociais",
-      price: "Desde 120€/mês",
+      
       description: "Presença consistente e profissional nas redes sociais com conteúdos planeados e publicações regulares.",
       image: socialImage,
       features: [
@@ -60,7 +60,7 @@ const Services = () => {
     },
     {
       title: "Branding e Criação de Logotipos",
-      price: "70€",
+      
       description: "Criação de logo profissional, moderno e minimalista que representa a identidade da sua marca. Serviço completo de branding acessível.",
       image: brandingImage,
       features: [
@@ -74,7 +74,7 @@ const Services = () => {
     },
     {
       title: "Criação e Gestão de Campanhas Google Ads",
-      price: "Variável",
+      
       description: "Campanhas de publicidade Google otimizadas para maximizar o retorno do seu investimento com base em resultados reais.",
       image: googleAdsImage,
       features: [
@@ -86,7 +86,7 @@ const Services = () => {
     },
     {
       title: "Integração de Agentes IA",
-      price: "Desde 1000€",
+      
       description: "Agentes de inteligência artificial para automatizar a comunicação e processos do seu negócio através de chat, WhatsApp, chamadas e mais.",
       image: aiImage,
       features: [
@@ -135,7 +135,7 @@ const Services = () => {
                 key={index}
                 title={service.title}
                 description={service.description}
-                price={service.price}
+                
                 image={service.image}
                 features={service.features}
               />
