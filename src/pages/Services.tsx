@@ -19,7 +19,7 @@ const Services = () => {
   const services = [
     {
       title: "Criação de Websites e Web Design",
-      price: "Desde 700€",
+      
       description: "Sites baratos e profissionais, modernos e responsivos, otimizados para conversão. Web design personalizado com SEO básico incluído e formação de gestão.",
       image: websiteImage,
       features: [
