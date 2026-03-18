@@ -113,6 +113,10 @@ const Footer = () => {
               <Link to="/cookies" className="text-secondary-foreground/60 hover:text-primary transition-colors">
                 Política de Cookies
               </Link>
+              <span className="text-secondary-foreground/40">|</span>
+              <a href="https://livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/60 hover:text-primary transition-colors">
+                Livro de Reclamações
+              </a>
             </div>
           </div>
         </div>
