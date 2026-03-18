@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Zap, Pen, ArrowRight, Quote } from "lucide-react";
+import { Zap, Pen, ArrowRight, Quote, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
@@ -303,6 +303,15 @@ const Home = () => {
               <CarouselPrevious className="bg-card border-border text-foreground hover:bg-accent" />
               <CarouselNext className="bg-card border-border text-foreground hover:bg-accent" />
             </Carousel>
+          </div>
+
+          <div className="text-center mt-10">
+            <a href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK/review" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                <Star className="mr-2" size={20} />
+                Deixa a tua avaliação
+              </Button>
+            </a>
           </div>
         </div>
       </section>
