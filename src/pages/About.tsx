@@ -11,23 +11,6 @@ const About = () => {
   const missionSection = useScrollAnimation();
   const valuesSection = useScrollAnimation();
   const specializationSection = useScrollAnimation();
-  const processSteps = [{
-    step: "Passo 1",
-    title: "Primeiro Contacto",
-    description: "Seja contactado, contacte ou peça um orçamento"
-  }, {
-    step: "Passo 2",
-    title: "Reunião Online",
-    description: "Marque uma reunião online, grátis e sem compromisso"
-  }, {
-    step: "Passo 3",
-    title: "Análise do Negócio",
-    description: "Analisamos o seu negócio para avaliar como o iremos ajudar"
-  }, {
-    step: "Passo 4",
-    title: "Sucesso",
-    description: "Aplicamos as nossas melhores estratégias e métodos validados e juntos, crescemos o seu negócio como nunca antes!"
-  }];
   return <div className="min-h-screen bg-background">
       <Helmet>
         <title>Sobre a Agência Vela | Marketing Digital Tavira e Algarve | Portugal</title>
