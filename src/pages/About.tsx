@@ -10,13 +10,7 @@ const About = () => {
   const storySection = useScrollAnimation();
   const missionSection = useScrollAnimation();
   const valuesSection = useScrollAnimation();
-  const processSection = useScrollAnimation();
   const specializationSection = useScrollAnimation();
-  const processStep1 = useScrollAnimation();
-  const processStep2 = useScrollAnimation();
-  const processStep3 = useScrollAnimation();
-  const processStep4 = useScrollAnimation();
-  const stepAnimations = [processStep1, processStep2, processStep3, processStep4];
   const processSteps = [{
     step: "Passo 1",
     title: "Primeiro Contacto",
