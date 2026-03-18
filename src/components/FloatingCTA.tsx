@@ -1,25 +1,15 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const FloatingCTA = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // Show after scrolling past the hero (500px)
-      setIsVisible(window.scrollY > 500);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  if (!isVisible) return null;
+  // Hide on the quote page
+  if (location.pathname === "/quote") return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
+    <div className="fixed bottom-6 right-6 z-50">
       <Link to="/quote">
         <Button
           size="lg"
