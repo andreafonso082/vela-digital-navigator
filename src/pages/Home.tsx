@@ -201,6 +201,15 @@ const Home = () => {
                 <p className="text-muted-foreground">{pillar.description}</p>
               </div>)}
           </div>
+
+          <div className="text-center mt-12">
+            <Link to="/quote">
+              <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground text-lg px-8 py-6">
+                Peça o seu orçamento gratuito
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
