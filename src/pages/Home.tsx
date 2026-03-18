@@ -16,8 +16,31 @@ const Home = () => {
   const servicesSection = useScrollAnimation();
   const pillarsSection = useScrollAnimation();
   const specialistsSection = useScrollAnimation();
+  const processSection = useScrollAnimation();
+  const processStep1 = useScrollAnimation();
+  const processStep2 = useScrollAnimation();
+  const processStep3 = useScrollAnimation();
+  const processStep4 = useScrollAnimation();
+  const stepAnimations = [processStep1, processStep2, processStep3, processStep4];
   const testimonialsSection = useScrollAnimation();
   const ctaSection = useScrollAnimation();
+  const processSteps = [{
+    step: "Passo 1",
+    title: "Primeiro Contacto",
+    description: "Seja contactado, contacte ou peça um orçamento"
+  }, {
+    step: "Passo 2",
+    title: "Reunião Online",
+    description: "Marque uma reunião online, grátis e sem compromisso"
+  }, {
+    step: "Passo 3",
+    title: "Análise do Negócio",
+    description: "Analisamos o seu negócio para avaliar como o iremos ajudar"
+  }, {
+    step: "Passo 4",
+    title: "Sucesso",
+    description: "Aplicamos as nossas melhores estratégias e métodos validados e juntos, crescemos o seu negócio como nunca antes!"
+  }];
   const services = [{
     title: "Websites Profissionais e Sites Baratos",
     description: "Criação de websites modernos desde 700€",
