@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import AnimatedBackground from "./components/AnimatedBackground";
 import { ScrollToTop } from "./components/ScrollToTop";
+import FloatingCTA from "./components/FloatingCTA";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -27,6 +28,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <FloatingCTA />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

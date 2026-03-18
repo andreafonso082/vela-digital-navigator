@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
+import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -142,6 +144,22 @@ const Services = () => {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-hero">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Interessado nos nossos serviços?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Peça o seu orçamento gratuito e sem compromisso. Respondemos em menos de 24 horas.
+          </p>
+          <Link to="/quote">
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6">
+              Pedir Orçamento Gratuito
+            </Button>
+          </Link>
+        </div>
+      </section>
 
       <Footer />
     </div>

@@ -201,6 +201,15 @@ const Home = () => {
                 <p className="text-muted-foreground">{pillar.description}</p>
               </div>)}
           </div>
+
+          <div className="text-center mt-12">
+            <Link to="/quote">
+              <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground text-lg px-8 py-6">
+                Peça o seu orçamento gratuito
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -218,11 +227,19 @@ const Home = () => {
           <p className="text-xl text-secondary-foreground/80 max-w-3xl mx-auto mb-8">
             Especialistas digitais dedicados ao crescimento e impulsão de pequenos negócios. Oferecemos automatização, otimização de negócio e estratégias personalizadas de marketing low-cost que cabem no seu orçamento.
           </p>
-          <Link to="/about">
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-secondary">
-              Conheça-nos melhor
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/quote">
+              <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground">
+                Peça um orçamento grátis
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </Link>
+            <Link to="/about">
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-secondary">
+                Conheça-nos melhor
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
