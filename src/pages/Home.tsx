@@ -270,7 +270,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section ref={testimonialsSection.elementRef} className="py-20">
+      <section ref={testimonialsSection.elementRef} className="py-20 bg-accent">
         <div className={`container mx-auto px-4 transition-all duration-700 ${testimonialsSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
