@@ -13,7 +13,7 @@ const CookiePolicy = () => {
         <meta name="keywords" content="agência de marketing, agência de marketing algarve, marketing algarve, agência criativa, telemarketing, marketing, agência de marketing tavira, marketing tavira, empresa que faz sites, empresa de sites, sites baratos" />
       </Helmet>
       <Header />
-      <main className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 pt-44 pb-24">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-8 text-foreground">Política de Cookies</h1>
           
