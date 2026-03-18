@@ -304,6 +304,15 @@ const Home = () => {
               <CarouselNext className="bg-card border-border text-foreground hover:bg-accent" />
             </Carousel>
           </div>
+
+          <div className="text-center mt-10">
+            <a href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK/review" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                <Star className="mr-2" size={20} />
+                Deixa a tua avaliação
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
 
