@@ -46,7 +46,7 @@ const Services = () => {
     },
     {
       title: "Gestão de Redes Sociais",
-      price: "Desde 120€/mês",
+      
       description: "Presença consistente e profissional nas redes sociais com conteúdos planeados e publicações regulares.",
       image: socialImage,
       features: [
