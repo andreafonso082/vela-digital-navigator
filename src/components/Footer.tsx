@@ -48,6 +48,11 @@ const Footer = () => {
                   Pedir Orçamento
                 </Link>
               </li>
+              <li>
+                <Link to="/faq" className="text-secondary-foreground/80 hover:text-primary transition-colors text-sm">
+                  Perguntas Frequentes
+                </Link>
+              </li>
             </ul>
           </div>
 
