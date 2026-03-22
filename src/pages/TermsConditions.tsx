@@ -141,7 +141,7 @@ const TermsConditions = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4 text-foreground">Responsabilidade do Cliente</h2>
               <p>
-                O cumprimento de todos os prazos e do cumprimento correto de todos e quaisquer projetos depende também do cumprimento e empenho do cliente, pelo que este deve comprometer-se a:
+                O cumprimento de todos os prazos e o desenvolvimento correto de todos e quaisquer projetos depende do empenho e feedback do cliente, pelo que este deve comprometer-se a:
               </p>
               <ul className="list-disc ml-6 mt-2 space-y-2">
                 <li>Fornecer conteúdos, imagens e quaisquer informações necessárias</li>
