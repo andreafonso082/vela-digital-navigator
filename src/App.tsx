@@ -17,6 +17,7 @@ import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiePolicy from "./pages/CookiePolicy";
 import TermsConditions from "./pages/TermsConditions";
+import FAQ from "./pages/FAQ";
 
 const queryClient = new QueryClient();
 
