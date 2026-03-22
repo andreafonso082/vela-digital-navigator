@@ -105,7 +105,7 @@ const CookiePolicy = () => {
               <h2 className="text-2xl font-semibold mb-4 text-foreground">Mais Informações</h2>
               <p>
                 Se tiver alguma dúvida sobre a nossa política de cookies, pode contactar-nos através 
-                de: vela.web.team@gmail.com
+                de: contacto@agencia-vela.com
               </p>
               <p className="mt-4 text-sm">Última atualização: {new Date().toLocaleDateString('pt-PT')}</p>
             </section>

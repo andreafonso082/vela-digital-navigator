@@ -79,7 +79,7 @@ const PrivacyPolicy = () => {
               <h2 className="text-2xl font-semibold mb-4 text-foreground">7. Contacto</h2>
               <p>
                 Para questões sobre esta política de privacidade ou sobre os seus dados pessoais, 
-                contacte-nos através de: vela.web.team@gmail.com
+                contacte-nos através de: contacto@agencia-vela.com
               </p>
             </section>
 
