@@ -105,13 +105,17 @@ const Footer = () => {
             <p className="text-sm text-secondary-foreground/60">
               © {new Date().getFullYear()} Vela Agency. Todos os direitos reservados.
             </p>
-            <div className="flex gap-4 text-sm">
+            <div className="flex flex-wrap gap-4 text-sm">
               <Link to="/privacy" className="text-secondary-foreground/60 hover:text-primary transition-colors">
                 Política de Privacidade
               </Link>
               <span className="text-secondary-foreground/40">|</span>
               <Link to="/cookies" className="text-secondary-foreground/60 hover:text-primary transition-colors">
                 Política de Cookies
+              </Link>
+              <span className="text-secondary-foreground/40">|</span>
+              <Link to="/terms" className="text-secondary-foreground/60 hover:text-primary transition-colors">
+                Termos e Condições
               </Link>
               <span className="text-secondary-foreground/40">|</span>
               <a href="https://livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/60 hover:text-primary transition-colors">
