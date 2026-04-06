@@ -99,16 +99,47 @@ const Services = () => {
     },
   ];
 
+  const servicesJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Serviços de Marketing Digital - Agência Vela",
+    "description": "Serviços de marketing digital, web design, SEO e branding no Algarve e em todo Portugal",
+    "numberOfItems": services.length,
+    "itemListElement": services.map((service, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Service",
+        "name": service.title,
+        "description": service.description,
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "Agência Vela",
+          "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Algarve" },
+            { "@type": "AdministrativeArea", "name": "Tavira" },
+            { "@type": "Country", "name": "Portugal" }
+          ]
+        }
+      }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Serviços de Marketing Digital | Web Design e SEO | Agência Vela Algarve</title>
         <meta name="description" content="Serviços de marketing digital da Agência Vela: criação de websites desde 700€, SEO, Google Meu Negócio, gestão de redes sociais, branding e agentes IA. Marketing Tavira e Algarve com preços low-cost." />
         <link rel="canonical" href="https://vela-digital-navigator.lovable.app/services" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="Serviços de Marketing Digital | Web Design e SEO | Agência Vela" />
-        <meta property="og:description" content="Serviços de marketing digital: websites desde 700€, SEO, redes sociais e branding." />
+        <meta property="og:description" content="Serviços de marketing digital: websites desde 700€, SEO, redes sociais e branding no Algarve e Portugal." />
         <meta property="og:url" content="https://vela-digital-navigator.lovable.app/services" />
-        <meta name="keywords" content="agência de marketing, agência de marketing algarve, marketing algarve, agência criativa, telemarketing, marketing, agência de marketing tavira, marketing tavira, empresa que faz sites, empresa de sites, sites baratos, criação de website, web design, SEO, google meu negócio, gestão de redes sociais, branding, criação de logo, agentes IA, marketing low-cost" />
+        <meta property="og:image" content="https://vela-digital-navigator.lovable.app/og-image.png" />
+        <meta property="og:locale" content="pt_PT" />
+        <meta name="keywords" content="agência de marketing, agência de marketing algarve, marketing algarve, agência criativa, telemarketing, marketing, agência de marketing tavira, marketing tavira, empresa que faz sites, empresa de sites, sites baratos, criação de website, web design, SEO, google meu negócio, gestão de redes sociais, branding, criação de logo, agentes IA, marketing low-cost, serviços marketing digital, web design algarve, web design tavira" />
+        <script type="application/ld+json">{JSON.stringify(servicesJsonLd)}</script>
       </Helmet>
       <Header />
       
