@@ -11,7 +11,11 @@ import heroVideo from "@/assets/hero-video.mp4";
 import websiteImage from "@/assets/service-website.jpg";
 import socialImage from "@/assets/service-social.jpg";
 import aiImage from "@/assets/service-ai.jpg";
+import seoImage from "@/assets/service-seo.jpg";
+import brandingImage from "@/assets/service-branding.jpg";
+import googleAdsImage from "@/assets/service-google-ads.jpg";
 import specialistsBg from "@/assets/specialists-bg.avif";
+import CardSwap, { Card } from "@/components/CardSwap";
 const Home = () => {
   const servicesSection = useScrollAnimation();
   const pillarsSection = useScrollAnimation();
