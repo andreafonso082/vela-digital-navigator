@@ -11,7 +11,11 @@ import heroVideo from "@/assets/hero-video.mp4";
 import websiteImage from "@/assets/service-website.jpg";
 import socialImage from "@/assets/service-social.jpg";
 import aiImage from "@/assets/service-ai.jpg";
+import seoImage from "@/assets/service-seo.jpg";
+import brandingImage from "@/assets/service-branding.jpg";
+import googleAdsImage from "@/assets/service-google-ads.jpg";
 import specialistsBg from "@/assets/specialists-bg.avif";
+import CardSwap, { Card } from "@/components/CardSwap";
 const Home = () => {
   const servicesSection = useScrollAnimation();
   const pillarsSection = useScrollAnimation();
@@ -42,13 +46,25 @@ const Home = () => {
     description: "Aplicamos as nossas melhores estratégias e métodos validados e juntos, crescemos o seu negócio como nunca antes!"
   }];
   const services = [{
-    title: "Websites Profissionais e Sites Baratos",
-    description: "Criação de websites modernos e responsivos",
+    title: "Criação de Websites e Web Design",
+    description: "Sites profissionais, modernos e responsivos desde 700€",
     image: websiteImage
+  }, {
+    title: "SEO e Google Meu Negócio",
+    description: "Otimização para máxima visibilidade local",
+    image: seoImage
   }, {
     title: "Gestão de Redes Sociais",
     description: "Presença consistente e profissional nas redes",
     image: socialImage
+  }, {
+    title: "Branding e Criação de Logotipos",
+    description: "Identidade visual moderna e profissional",
+    image: brandingImage
+  }, {
+    title: "Campanhas Google Ads",
+    description: "Publicidade otimizada para máximo retorno",
+    image: googleAdsImage
   }, {
     title: "Integração de Agentes IA",
     description: "Automatize a comunicação do seu negócio",
@@ -149,36 +165,56 @@ const Home = () => {
       </section>
 
       {/* Services Preview */}
-      <section ref={servicesSection.elementRef} className="py-20 bg-accent">
+      <section ref={servicesSection.elementRef} className="py-20 bg-accent overflow-hidden">
         <div className={`container mx-auto px-4 transition-all duration-700 ${servicesSection.isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Web Design e Serviços de Marketing Digital
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Agência especializada em criação de websites, branding, gestão de redes sociais e otimização de negócios
-            </p>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px]">
+            {/* Left: Title + CTA */}
+            <div className="text-left">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Web Design e Serviços de Marketing Digital
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8 max-w-xl">
+                Agência especializada em criação de websites, branding, gestão de redes sociais, SEO, Google Ads e integração de IA para potenciar o seu negócio.
+              </p>
+              <Link to="/services">
+                <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground">
+                  Ver mais
+                  <ArrowRight className="ml-2" size={20} />
+                </Button>
+              </Link>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {services.map((service, index) => <div key={index} className="bg-card rounded-lg overflow-hidden shadow-elegant hover:shadow-strong transition-all duration-300 group">
-                <div className="relative h-64 overflow-hidden">
-                  <img src={service.image} alt={`${service.title} - Agência de Marketing Digital Vela`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
-                </div>
-              </div>)}
-          </div>
+            {/* Right: Animated CardSwap */}
+            <div className="relative h-[500px] hidden lg:block">
+              <CardSwap width={440} height={340} cardDistance={55} verticalDistance={65} delay={3500} pauseOnHover>
+                {services.map((service, index) => (
+                  <Card key={index}>
+                    <div className="relative h-1/2 overflow-hidden">
+                      <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
+                      <p className="text-muted-foreground text-sm">{service.description}</p>
+                    </div>
+                  </Card>
+                ))}
+              </CardSwap>
+            </div>
 
-          <div className="text-center">
-            <Link to="/services">
-              <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground">
-                Ver Todos os Serviços
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-            </Link>
+            {/* Mobile fallback grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:hidden">
+              {services.map((service, index) => (
+                <div key={index} className="bg-card rounded-lg overflow-hidden shadow-elegant">
+                  <div className="relative h-40 overflow-hidden">
+                    <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-lg font-bold text-foreground mb-1">{service.title}</h3>
+                    <p className="text-muted-foreground text-sm">{service.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
