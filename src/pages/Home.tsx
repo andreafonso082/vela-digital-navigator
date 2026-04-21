@@ -185,16 +185,16 @@ const Home = () => {
             </div>
 
             {/* Right: Animated CardSwap */}
-            <div className="relative h-[500px] hidden lg:block">
-              <CardSwap width={440} height={340} cardDistance={55} verticalDistance={65} delay={3500} pauseOnHover>
+            <div className="relative h-[600px] hidden lg:block">
+              <CardSwap width={560} height={420} cardDistance={70} verticalDistance={80} delay={3500} pauseOnHover>
                 {services.map((service, index) => (
                   <Card key={index}>
                     <div className="relative h-1/2 overflow-hidden">
                       <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
-                      <p className="text-muted-foreground text-sm">{service.description}</p>
+                      <h3 className="text-2xl font-bold text-foreground mb-2">{service.title}</h3>
+                      <p className="text-muted-foreground">{service.description}</p>
                     </div>
                   </Card>
                 ))}
