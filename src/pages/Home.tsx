@@ -46,13 +46,25 @@ const Home = () => {
     description: "Aplicamos as nossas melhores estratégias e métodos validados e juntos, crescemos o seu negócio como nunca antes!"
   }];
   const services = [{
-    title: "Websites Profissionais e Sites Baratos",
-    description: "Criação de websites modernos e responsivos",
+    title: "Criação de Websites e Web Design",
+    description: "Sites profissionais, modernos e responsivos desde 700€",
     image: websiteImage
+  }, {
+    title: "SEO e Google Meu Negócio",
+    description: "Otimização para máxima visibilidade local",
+    image: seoImage
   }, {
     title: "Gestão de Redes Sociais",
     description: "Presença consistente e profissional nas redes",
     image: socialImage
+  }, {
+    title: "Branding e Criação de Logotipos",
+    description: "Identidade visual moderna e profissional",
+    image: brandingImage
+  }, {
+    title: "Campanhas Google Ads",
+    description: "Publicidade otimizada para máximo retorno",
+    image: googleAdsImage
   }, {
     title: "Integração de Agentes IA",
     description: "Automatize a comunicação do seu negócio",
