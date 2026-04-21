@@ -9,51 +9,52 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Core Brand Colors - Vela Agency (Premium Dark Tech Theme) */
-    --background: 0 0% 4%;
-    --foreground: 0 0% 93%;
+    /* Premium dark background - slightly warmer, less harsh than pure black */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 95%;
     
     /* Primary - Bold Red */
     --primary: 0 80% 50%;
     --primary-foreground: 0 0% 100%;
     --primary-hover: 0 80% 40%;
     
-    /* Secondary - Deep Black */
-    --secondary: 0 0% 2%;
-    --secondary-foreground: 0 0% 93%;
-    --secondary-hover: 0 0% 10%;
+    /* Secondary - Deep charcoal with subtle warmth */
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 95%;
+    --secondary-hover: 0 0% 14%;
     
-    /* Accent - Dark Carbon */
-    --accent: 0 0% 8%;
-    --accent-foreground: 0 0% 93%;
+    /* Accent - Elevated surface */
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 95%;
     
-    /* Muted - Stealth Gray */
-    --muted: 0 0% 6%;
-    --muted-foreground: 0 0% 50%;
+    /* Muted - Subtle background variation */
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 55%;
     
-    /* Card - Elevated Surface */
-    --card: 0 0% 6%;
-    --card-foreground: 0 0% 93%;
+    /* Card - Premium elevated surface */
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 95%;
     
     /* Popover */
-    --popover: 0 0% 6%;
-    --popover-foreground: 0 0% 93%;
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 95%;
     
     /* Destructive */
     --destructive: 0 80% 50%;
     --destructive-foreground: 0 0% 100%;
     
-    /* Border & Input */
-    --border: 0 0% 12%;
-    --input: 0 0% 12%;
+    /* Border & Input - Subtle borders for premium feel */
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
     --ring: 0 80% 50%;
     
     --radius: 0.75rem;
     
     /* Custom Design Tokens */
     --gradient-hero: linear-gradient(135deg, hsl(0 80% 50%), hsl(0 80% 35%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 7%));
-    --shadow-elegant: 0 10px 40px -10px hsl(0 0% 0% / 0.6);
-    --shadow-strong: 0 20px 60px -15px hsl(0 0% 0% / 0.8);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 7%), hsl(0 0% 10%));
+    --shadow-elegant: 0 10px 40px -10px hsl(0 0% 0% / 0.5);
+    --shadow-strong: 0 20px 60px -15px hsl(0 0% 0% / 0.6);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
