@@ -76,7 +76,7 @@ const Blog = () => {
         <meta property="og:title" content="Blog de Marketing Digital | Agência Vela" />
         <meta property="og:description" content="Dicas de marketing digital, SEO e web design para pequenos negócios." />
         <meta property="og:url" content="https://vela-digital-navigator.lovable.app/blog" />
-        <meta name="keywords" content="agência de marketing, agência de marketing algarve, marketing algarve, agência criativa, telemarketing, marketing, agência de marketing tavira, marketing tavira, empresa que faz sites, empresa de sites, sites baratos, blog marketing digital, dicas SEO, web design, redes sociais, crescimento de negócio, impulsão de negócio" />
+        <meta name="keywords" content="agência de marketing, agência de marketing algarve, marketing algarve, agência criativa, telemarketing, marketing, agência de marketing tavira, marketing tavira, empresa que faz sites, empresa de sites, sites baratos, blog marketing digital, dicas SEO, web design, redes sociais, crescimento de negócio, impulsão de negócio, agencia de marketing, agencia de marketing algarve, agencia de marketing tavira, agencia criativa, agencia vela, crescimento de negocio, impulsao de negocio" />
       </Helmet>
       <Header />
       
