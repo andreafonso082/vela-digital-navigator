@@ -111,7 +111,7 @@ const FAQ = () => {
         <link rel="canonical" href="https://vela-digital-navigator.lovable.app/faq" />
         <meta
           name="keywords"
-          content="agência de marketing, agência de marketing algarve, agência de marketing tavira, agência de marketing portugal, agência de webdesign, marketing digital algarve, criação de websites, agência de comunicação, marketing tavira, web design algarve, agência criativa, empresa que faz sites, sites baratos, SEO algarve"
+          content="agência de marketing, agência de marketing algarve, agência de marketing tavira, agência de marketing portugal, agência de webdesign, marketing digital algarve, criação de websites, agência de comunicação, marketing tavira, web design algarve, agência criativa, empresa que faz sites, sites baratos, SEO algarve, agencia de marketing, agencia de marketing algarve, agencia de marketing tavira, agencia de marketing portugal, agencia de webdesign, agencia de comunicacao, agencia criativa, agencia vela, criacao de websites, criacao de website"
         />
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>

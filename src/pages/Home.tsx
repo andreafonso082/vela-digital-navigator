@@ -108,7 +108,7 @@ const Home = () => {
         <meta property="og:description" content="Agência Vela - Especialistas em marketing digital e web design no Algarve. Sites desde 700€. Marketing Tavira." />
         <meta property="og:url" content="https://vela-digital-navigator.lovable.app/" />
         <meta property="og:type" content="website" />
-        <meta name="keywords" content="agência de marketing, agência de marketing algarve, marketing algarve, agência criativa, telemarketing, marketing, agência de marketing tavira, marketing tavira, empresa que faz sites, empresa de sites, sites baratos, agência vela, marketing digital, web design, criação de websites, SEO, google meu negócio, gestão de redes sociais, branding" />
+        <meta name="keywords" content="agência de marketing, agência de marketing algarve, marketing algarve, agência criativa, telemarketing, marketing, agência de marketing tavira, marketing tavira, empresa que faz sites, empresa de sites, sites baratos, agência vela, marketing digital, web design, criação de websites, SEO, google meu negócio, gestão de redes sociais, branding, agencia de marketing, agencia de marketing algarve, agencia de marketing tavira, agencia criativa, agencia de comunicacao, agencia de webdesign, agencia vela, criacao de websites, criacao de website, gestao de redes sociais, google meu negocio" />
       </Helmet>
       <Header />
       
