@@ -161,7 +161,7 @@ const TermsConditions = () => {
               </ul>
             </section>
 
-            <p className="text-sm mt-8">Última atualização: {new Date().toLocaleDateString('pt-PT')}</p>
+            <p className="text-sm mt-8">Última atualização: 27/04/2026</p>
           </div>
         </div>
       </main>
