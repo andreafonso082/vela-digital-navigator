@@ -113,7 +113,7 @@ const TermsConditions = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4 text-foreground">Direitos de Uso</h2>
               <p>
-                Todo e qualquer produto digital que seja gerado a partir da contratação dos nossos serviços é da propriedade do cliente que o contratou, pelo que esse produto digital poderá sempre ficar alojado nas plataformas da Agência ou ser transferido para o cliente, caso necessário. O alojamento destes produtos pode estar sujeito a um pagamento que deverá ser comunicado pela Agência antes da contratação dos serviços por parte do cliente.
+                Todo e qualquer produto digital que seja gerado a partir da contratação dos nossos serviços é da propriedade do cliente que o contratou, uma vez que pago na sua totalidade, pelo que poderá sempre ficar alojado nas plataformas da Agência ou ser transferido para o cliente, caso necessário. O alojamento destes produtos pode estar sujeito a um pagamento que deverá ser comunicado pela Agência antes da contratação dos serviços por parte do cliente.
               </p>
               <p className="mt-3">
                 Apenas produtos que estejam ligados a uma gestão mensal não podem ser transferidos para plataformas de clientes, afim de facilitar o trabalho por parte da agência (Exp: Um website que fique ligado a um serviço de gestão/manutenção mensal, deve ser mantido na plataforma da agência para que esta manutenção possa ser realizada corretamente).
